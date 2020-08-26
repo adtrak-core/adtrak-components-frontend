@@ -1,0 +1,35 @@
+{# Hero - Variant 3 #}
+<div class="bg-secondary">
+  <div class="container">
+    <div class="flex flex-wrap">
+      <div class="w-full max-w-2xl bg-primary py-24 md:py-32 xl:py-40 px-8 md:px-12">
+        {# If the subheading data is passed in #}
+        {% if subHeading %}
+          <span class="text-secondary uppercase tracking-wider block mb-2">{{ subHeading }}</span>
+        {% endif %}
+        
+        {# If the heading data is passed in #}
+        {% if heading %}
+          <h1 class="font-bold text-3xl md:text-4xl xl:text-5xl text-white leading-tight mb-6">{{ heading }}</h1>
+        {% endif %}
+        
+        {# If the usps data is passed in #}
+        {% if usps %}
+          <ul class="list-inside list-disc mb-6">
+            {% for usp in usps %}
+              <li class="text-white mb-1">{{ usp }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {# If the btns boolean is true #}
+        {% if btns %}
+          <div class="flex flex-wrap items-center">
+            <a href="#" class="bg-secondary hover:bg-secondary-dark focus:bg-secondary-dark text-center border-2 border-transparent rounded-md text-white block px-4 py-2 md:mr-4 mb-3 w-full md:w-auto">Button Title</a>
+            <a href="#" class="bg-transparent text-center border-2 border-secondary rounded-md text-white block px-4 py-2 md:mr-4 mb-3 text-secondary w-full md:w-auto hover:border-secondary-dark focus:border-secondary-dark hover:text-secondary-dark focus:text-secondary-dark">Button Title</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

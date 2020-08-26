@@ -6,8 +6,37 @@ module.exports = {
     }
   },
   theme: {
-    extend: {},
+    screens: {
+			sm: '520px',
+      md: '768px',
+      lg: '1024px',
+			xl: '1280px',
+			'2xl': '1600px'
+    },
+    extend: {
+      colors: {
+        primary: {
+          light: '#667EEA',
+          default: '#162980',
+          dark: '#08224E'
+        },
+        secondary: {
+          default: '#1DB77F',
+          dark: '#1D997D'
+        }
+      },
+      fontFamily: {
+				sans: [
+					'Roboto',
+					'Arial',
+					'sans-serif'
+				],
+			},
+    },
   },
   variants: {},
   plugins: [],
-}
+  corePlugins: {
+		container: false,
+	},
+};

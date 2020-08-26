@@ -1,0 +1,14 @@
+title: Heros
+status: wip
+
+context:
+  subHeading: Service in <strong>location</strong>
+  heading: Lorem ipsum dolor sit amet, adipicising etim consectetur.
+  blurb: >- 
+    Etiam eu fringilla nisl. Vivamus quis vehicula metus. Suspendi dui erat, volutpat eu mauris sed, eleifend ultrices nulla.
+  btns: true
+  usps:
+    - Lorem <strong>ipsum dolor</strong> sit amet
+    - Aenean eu nisi ut nulla <strong>fringilla varius</strong>
+    - Ipsum dolor <strong>eu nisi</strong> ut nulla fringilla varius
+  bgImage: http://placekitten.com/500/500

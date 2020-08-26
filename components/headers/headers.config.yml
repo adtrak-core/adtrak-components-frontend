@@ -1,0 +1,39 @@
+title: Headers
+status: ready
+
+context:
+  topNavUsps:
+    - Lorem <strong>ipsum dolor</strong> sit amet
+    - <strong>Aenean eu nisi</strong> ut nulla fringilla varius
+  topNav:
+    -
+      title: Home
+      href: '#'
+      active: true
+    -
+      title: About Us
+      href: '#'
+    -
+      title: Meet The Team
+      href: '#'
+    -
+      title: Gallery
+      href: '#'
+  nav:
+    -
+      title: Service One
+      href: '#'
+      active: true
+    -
+      title: Service Two
+      href: '#'
+    -
+      title: Service Three
+      href: '#'
+    -
+      title: Service Four
+      href: '#'
+    -
+      title: Service Five
+      href: '#'
+    

@@ -1,0 +1,29 @@
+title: Buckets
+status: wip
+
+context:
+  buckets:
+    -
+      image: 
+        src: https://placedog.net/500
+        title: Lovely Pooch
+      heading: <strong>Service</strong> One
+      link: '#'
+    -
+      image: 
+        src: https://placedog.net/500
+        title: Lovely Pooch
+      heading: <strong>Service</strong> Two
+      link: '#'
+    -
+      image: 
+        src: https://placedog.net/500
+        title: Lovely Pooch
+      heading: <strong>Service</strong> Three
+      link: '#'
+    -
+      image: 
+        src: https://placedog.net/500
+        title: Lovely Pooch
+      heading: <strong>Service</strong> Four
+      link: '#'
