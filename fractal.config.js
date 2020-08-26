@@ -19,6 +19,6 @@ fractal.set('project.title', 'Adtrak Components Library');
 fractal.web.set('server.port', 4444);
 fractal.components.set('path', path.join(__dirname, 'components'));
 fractal.docs.set('path', __dirname + '/docs');
-fractal.web.set('static.path', path.join(__dirname, 'build'));
+// fractal.web.set('static.path', path.join(__dirname, 'public'));
 fractal.web.set('builder.dest', __dirname + '/build');
 fractal.web.theme(theme);
