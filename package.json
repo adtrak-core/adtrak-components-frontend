@@ -18,6 +18,6 @@
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "concurrently \"fractal start --sync\" \"npm run development -- --watch\"",
     "prod": "npm run production",
-    "production": "concurrently \"fractal build\" \"cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js\""
+    "production": "concurrently \"rm -rf build\" \"cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js\" \"fractal build\""
   }
 }
