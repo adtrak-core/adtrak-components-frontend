@@ -31,10 +31,14 @@ module.exports = {
 					'Arial',
 					'sans-serif'
 				],
-			},
+      },
     },
   },
-  variants: {},
+  variants: {
+    backgroundColor: ['responsive', 'group-hover', 'hover', 'focus', 'group-focus'],
+    textColor: ['responsive', 'group-hover', 'hover', 'focus', 'group-focus'],
+    padding: ['responsive', 'group-hover', 'hover', 'focus', 'group-focus'],
+  },
   plugins: [],
   corePlugins: {
 		container: false,

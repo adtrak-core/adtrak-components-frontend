@@ -1,0 +1,16 @@
+{# SubNav - Variant 2 #}
+{# Remove this, just for background aesthetic #}<div class="bg-gray-200 p-8">{# #}
+  <nav
+    role="navigation"
+    aria-label="Sub Navigation"
+    class="bg-primary inline-block w-full max-w-xs shadow-lg"
+  >
+    <ul>
+      {% for item in subNav %}
+        <li class="{{ loop.index != loop.length ? 'border-b border-primary-light' : '' }}">
+          <a class="text-white text-center uppercase tracking-wider px-5 py-3 block hover:bg-primary-dark focus:bg-primary-dark hover:pl-6 focus:pl-6 transition-all duration-300 ease-in-out" href="{{ item.href }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{#  #}</div>{# #}

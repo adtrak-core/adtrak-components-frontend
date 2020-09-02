@@ -1,0 +1,38 @@
+{# Buckets - Variant 3 #}
+<div class="bg-primary py-8">
+  <div class="container">
+    <div class="flex flex-wrap md:-mx-5">
+      {% for bucket in buckets %}
+        <div class="w-full md:w-1/2 lg:w-1/4 md:px-5 mb-8 lg:mb-0 group">
+          <div class="bg-white">
+            {% if bucket.image %}
+              <div class="w-full">
+                <img class="block w-full" src="{{ bucket.image.src }}" alt="{{ bucket.image.title }}" />
+              </div>
+            {% endif %}
+
+            <div class="p-6 flex flex-wrap justify-center">
+              {% if bucket.heading %}
+                <div class="w-full">
+                  <span class="block text-xl leading-tight text-center mb-2">{{ bucket.heading }}</span>
+                </div>
+              {% endif %}
+
+              {% if bucket.description %}
+                <div class="w-full">
+                  <span class="block text-center mb-5 text-primary opacity-50 px-4">{{ bucket.description }}</span>
+                </div>
+              {% endif %}
+
+              {% if bucket.link %}
+                <div class="mx-auto">
+                  <a href="{{ bucket.link }}" class="bg-transparent border-2 text-primary-light border-primary-light hover:border-secondary focus:border-secondary hover:text-secondary focus:text-secondary text-center border-2 border-transparent rounded-md text-white inline-block mx-auto px-4 py-2">More Info</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
