@@ -1,21 +1,21 @@
-{# SubNav - Variant 3 #}
-{# Remove this, just for background aesthetic #}<div class="bg-gray-200 p-8">{# #}
-  <nav
-    role="navigation"
-    aria-label="Sub Navigation"
-    class="bg-white inline-block rounded-lg w-full max-w-xs shadow-lg"
-  >
-    <ul>
-      {% for item in subNav %}
-        <li class="{{ loop.index != loop.length ? 'border-b border-gray-200' : '' }}">
-          <a class="text-primary p-5 block hover:bg-gray-100 focus:bg-gray-100 hover:pl-6 focus:pl-6 transition-all duration-300 ease-in-out {{ loop.index != loop.length ? ' ' : ' rounded-b-lg' }}{{ loop.index == 0 ? ' ' : ' rounded-t-lg' }}" href="{{ item.href }}">
-            <span class="uppercase font-bold tracking-wider bold block mb-1">{{ item.title }}</span>
-            {% if item.description %}
-              <span class="opacity-50 block text-sm">{{ item.description }}</span>
-            {% endif %}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-{# Remove this, just for background aesthetic #}</div>{# #}
+{# FAQs - Variant 3 #}
+<dl class="bg-gray-100 p-8">
+  <div class="bg-white rounded-lg shadow-md">
+    {% for faq in faqs %}
+      <div class="{{ faq.open ? ' bg-gray-100' : ' bg-transparent' }}{{ loop.index != loop.length ? ' border-b border-gray-200': ' ' }}">
+        <dt class="{{ faq.open ? 'mb-2' : 'mb-0' }}">
+          <button aria-expanded="false" aria-controls="faq-{{ loop.index }}" class="text-primary text-left block w-full py-6 px-6 font-bold hover:text-secondary focus:text-secondary">
+            {{ faq.question }}
+          </button>
+        </dt>
+        {% if faq.open %}
+          <dd class="max-w-2xl px-6 pb-2 -mt-2">
+            <p id="faq-{{ loop.index }}" class="text-primary text-sm md:text-base opacity-50 pb-5">
+              {{ faq.answer }}
+            </p>
+          </dd>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</dl>

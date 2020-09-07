@@ -1,9 +1,9 @@
 {# FAQs - Variant 2 #}
 <dl class="bg-white p-8">
   {% for faq in faqs %}
-    <div class="border-b border-gray-200">
+    <div class="{{ loop.index != loop.length ? ' border-b border-gray-200': ' ' }}">
       <dt class="{{ faq.open ? 'mb-2' : 'mb-0' }}">
-        <button aria-expanded="false" aria-controls="faq-{{ loop.index }}" class="text-primary text-left block w-full py-4">
+        <button aria-expanded="false" aria-controls="faq-{{ loop.index }}" class="text-primary text-left block w-full py-4 hover:text-secondary focus:text-secondary">
           {{ faq.question }}
         </button>
       </dt>

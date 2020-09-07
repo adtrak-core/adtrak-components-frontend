@@ -3,7 +3,7 @@
   {% for faq in faqs %}
     <div class=" bg-white rounded-lg shadow-lg mb-4">
       <dt class="{{ faq.open ? 'mb-2' : 'mb-0' }}">
-        <button aria-expanded="false" aria-controls="faq-{{ loop.index }}" class="font-bold text-secondary text-left block w-full py-4 px-5 md:px-8 xl:px-12">
+        <button aria-expanded="false" aria-controls="faq-{{ loop.index }}" class="font-bold text-secondary text-left block w-full py-4 px-5 md:px-8 xl:px-12 hover:text-secondary-dark focus:text-secondary-dark">
           {{ faq.question }}
         </button>
       </dt>
