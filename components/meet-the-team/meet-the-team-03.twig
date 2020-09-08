@@ -1,0 +1,30 @@
+{# Meet The Team - Variant 3 #}
+<div class="py-8">
+  <div class="container">
+    <div class="flex flex-wrap md:-mx-5">
+      {% for person in meetTheTeam %}
+        <div class="w-full md:w-1/2 lg:w-1/4 md:px-5 mb-8 lg:mb-0">
+          <div class="w-full">
+            <div class="flex flex-wrap justify-center">
+              {% if person.image %}
+                <img class="block w-full mb-4" src="{{ person.image.src }}" alt="{{ person.name }}" />
+              {% endif %}
+
+              {% if person.jobTitle %}
+                <div class="w-full">
+                  <span class="block uppercase text-sm tracking-wider text-primary-light">{{ person.jobTitle }}</span>
+                </div>
+              {% endif %}
+
+              {% if person.name %}
+                <div class="w-full">
+                  <span class="block text-xl md:text-2xl text-primary">{{ person.name }}</span>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

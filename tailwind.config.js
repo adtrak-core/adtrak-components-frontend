@@ -22,7 +22,8 @@ module.exports = {
         },
         secondary: {
           default: '#1DB77F',
-          dark: '#1D997D'
+          dark: '#1D997D',
+          light: '#78EFC4'
         }
       },
       fontFamily: {
@@ -39,7 +40,9 @@ module.exports = {
     textColor: ['responsive', 'group-hover', 'hover', 'focus', 'group-focus'],
     padding: ['responsive', 'group-hover', 'hover', 'focus', 'group-focus'],
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
   corePlugins: {
 		container: false,
 	},

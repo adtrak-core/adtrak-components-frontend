@@ -1,25 +1,2 @@
 title: Footer
 status: ready
-
-context:
-  faqs:
-    - 
-      question: Lorem ipsum dolor sit amet, consectetur adipiscing elit?
-      answer: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet nisl eget odio lacinia, eget eleifend massa tempor. Cras ut lectus posuere, ultrices orci in, porta libero.
-      open: false
-    - 
-      question: Etiam imperdiet nisl eget odio lacinia, eget eleifend massa tempor?
-      answer: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet nisl eget odio lacinia, eget eleifend massa tempor. Cras ut lectus posuere, ultrices orci in, porta libero.
-      open: true
-    - 
-      question: Phasellus volutpat, mauris vel hendrerit pulvinar, tellus nisl volutpat lectus?
-      answer: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet nisl eget odio lacinia, eget eleifend massa tempor. Cras ut lectus posuere, ultrices orci in, porta libero.
-      open: false
-    - 
-      question: Pellentesque habitant morbi tristique senectus et netus et malesuada?
-      answer: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet nisl eget odio lacinia
-      open: false

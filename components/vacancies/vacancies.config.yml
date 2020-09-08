@@ -1,0 +1,74 @@
+title: Vacancies
+status: wip
+
+context:
+  vacancies:
+    -
+      title: Job Title
+      description: >-
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel diam erat. Nulla volutpat elementum velit at suscipit.</p>
+
+        <p>Aenean tristique sed sem quis elementum. Vestibulum convallis dolor id diam vehicula, a ultricies dui accumsan. Donec ut metus iaculis, mollis ex ac, sodales.</p>
+
+        <p>Morbi in condimentum massa, vitae efficitur massa. Cras vestibulum eu leo eget pharetra. In hac habitasse platea dictumst. Ut et nulla tincidunt, hendrerit ex sed.</p>
+        
+        <ul>
+          <li>Morbi in condimentum massa, vitae efficitur massa</li>
+          <li>Ut et nulla tincidunt, hendrerit ex sed</li>
+          <li>Vestibulum convallis dolor id diam vehicula</li>
+          <li>Donec ut metus iaculis, mollis ex ac, sodales</li>
+        </ul>
+
+        <p>Morbi in condimentum massa, vitae efficitur massa. Cras vestibulum eu leo eget pharetra. In hac habitasse platea dictumst. Ut et nulla tincidunt, hendrerit ex sed.</p>
+    -
+      title: Job Title
+      active: true
+      description: >-
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel diam erat. Nulla volutpat elementum velit at suscipit.</p>
+
+        <p>Aenean tristique sed sem quis elementum. Vestibulum convallis dolor id diam vehicula, a ultricies dui accumsan. Donec ut metus iaculis, mollis ex ac, sodales.</p>
+
+        <p>Morbi in condimentum massa, vitae efficitur massa. Cras vestibulum eu leo eget pharetra. In hac habitasse platea dictumst. Ut et nulla tincidunt, hendrerit ex sed.</p>
+        
+        <ul>
+          <li>Morbi in condimentum massa, vitae efficitur massa</li>
+          <li>Ut et nulla tincidunt, hendrerit ex sed</li>
+          <li>Vestibulum convallis dolor id diam vehicula</li>
+          <li>Donec ut metus iaculis, mollis ex ac, sodales</li>
+        </ul>
+
+        <p>Morbi in condimentum massa, vitae efficitur massa. Cras vestibulum eu leo eget pharetra. In hac habitasse platea dictumst. Ut et nulla tincidunt, hendrerit ex sed.</p>
+    -
+      title: Job Title
+      description: >-
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel diam erat. Nulla volutpat elementum velit at suscipit.</p>
+
+        <p>Aenean tristique sed sem quis elementum. Vestibulum convallis dolor id diam vehicula, a ultricies dui accumsan. Donec ut metus iaculis, mollis ex ac, sodales.</p>
+
+        <p>Morbi in condimentum massa, vitae efficitur massa. Cras vestibulum eu leo eget pharetra. In hac habitasse platea dictumst. Ut et nulla tincidunt, hendrerit ex sed.</p>
+        
+        <ul>
+          <li>Morbi in condimentum massa, vitae efficitur massa</li>
+          <li>Ut et nulla tincidunt, hendrerit ex sed</li>
+          <li>Vestibulum convallis dolor id diam vehicula</li>
+          <li>Donec ut metus iaculis, mollis ex ac, sodales</li>
+        </ul>
+
+        <p>Morbi in condimentum massa, vitae efficitur massa. Cras vestibulum eu leo eget pharetra. In hac habitasse platea dictumst. Ut et nulla tincidunt, hendrerit ex sed.</p>
+    -
+      title: Job Title
+      description: >-
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel diam erat. Nulla volutpat elementum velit at suscipit.</p>
+
+        <p>Aenean tristique sed sem quis elementum. Vestibulum convallis dolor id diam vehicula, a ultricies dui accumsan. Donec ut metus iaculis, mollis ex ac, sodales.</p>
+
+        <p>Morbi in condimentum massa, vitae efficitur massa. Cras vestibulum eu leo eget pharetra. In hac habitasse platea dictumst. Ut et nulla tincidunt, hendrerit ex sed.</p>
+        
+        <ul>
+          <li>Morbi in condimentum massa, vitae efficitur massa</li>
+          <li>Ut et nulla tincidunt, hendrerit ex sed</li>
+          <li>Vestibulum convallis dolor id diam vehicula</li>
+          <li>Donec ut metus iaculis, mollis ex ac, sodales</li>
+        </ul>
+
+        <p>Morbi in condimentum massa, vitae efficitur massa. Cras vestibulum eu leo eget pharetra. In hac habitasse platea dictumst. Ut et nulla tincidunt, hendrerit ex sed.</p>

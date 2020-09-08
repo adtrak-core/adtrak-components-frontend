@@ -1,0 +1,41 @@
+title: Meet The Team
+status: wip
+
+context:
+  meetTheTeam:
+    -
+      image: 
+        src: https://placedog.net/650/650
+        title: Dan Farrow
+      name: Dan Farrow
+      jobTitle: Front-End Developer
+      description: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, leo non malesuada cursus, dolor erat gravida augue, in pharetra ipsum mi eu urna. Etiam eu fringilla nisl.
+      phone: 0800 000 0000
+    -
+      image: 
+        src: https://placedog.net/650/650
+        title: Dan Farrow
+      name: Dan Farrow
+      jobTitle: Front-End Developer
+      description: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, leo non malesuada cursus, dolor erat gravida augue, in pharetra ipsum mi eu urna. Etiam eu fringilla nisl.
+      phone: 0800 000 0000
+    -
+      image: 
+        src: https://placedog.net/650/650
+        title: Dan Farrow
+      name: Dan Farrow
+      jobTitle: Front-End Developer
+      description: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, leo non malesuada cursus, dolor erat gravida augue, in pharetra ipsum mi eu urna. Etiam eu fringilla nisl.
+      phone: 0800 000 0000
+    -
+      image: 
+        src: https://placedog.net/650/650
+        title: Dan Farrow
+      name: Dan Farrow
+      jobTitle: Front-End Developer
+      description: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, leo non malesuada cursus, dolor erat gravida augue, in pharetra ipsum mi eu urna. Etiam eu fringilla nisl.
+      phone: 0800 000 0000

@@ -1,0 +1,15 @@
+{# Why Choose Us - Variant 2 #}
+<div class="bg-secondary py-6">
+  <div class="container">
+    <div class="flex flex-wrap md:-mx-5">
+      {% for usp in whyChooseUs %}
+        <div class="w-full md:w-1/4 md:px-5 mb-5 md:mb-0">
+          <div class="rounded-full w-24 h-24 bg-white mx-auto shadow-md mb-6">
+          </div>
+
+          <span class="block leading-tight text-white text-center">{{ usp.text }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
