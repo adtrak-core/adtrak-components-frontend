@@ -1,0 +1,16 @@
+{# FAQs - Variant 1 #}
+<div class="bg-white">
+  <div class="bg-primary py-4 p-3">
+    <span class="block text-lg font-bold text-white">Downloads Section</span>
+  </div>
+
+  <ul>
+    {% for download in downloads %}
+      <li class="block">
+        <a href="{{ download.url }}" class="block text-primary p-3 hover:text-secondary focus:text-secondary transition-all ease-in-out duration-300 hover:pl-5{{ loop.index != loop.length ? ' border-b border-gray-300' : ''}}{{ loop.index % 2 == 1 ? ' bg-gray-100' : '' }}">
+          {{ download.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
