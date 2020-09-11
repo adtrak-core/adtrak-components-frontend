@@ -1,0 +1,52 @@
+{# Projects - Variant 1 #}
+<div class="bg-primary p-8">
+  <div class="flex flex-wrap">
+    <div class="w-full md:w-1/3 xl:w-1/4">
+      {% for project in projects %}
+        <button aria-expanded="false" aria-controls="project-{{ loop.index }}" class="bg-white text-primary uppercase tracking-wider text-left block w-full p-4 hover:text-secondary-dark focus:text-secondary-dark rounded md:rounded-l md:rounded-r-none mb-3{{ project.active ? ' opacity-100' : ' opacity-50' }}">
+          <span class="{{ project.active ? ' opacity-100' : ' opacity-50' }} block">
+            {{ project.title }}
+          </span>
+        </button>
+      {% endfor %}
+    </div>
+
+    <div class="w-full md:w-2/3 xl:w-3/4">
+      {% for project in projects %}
+        {% if project.active %}
+          <div class="bg-white rounded-lg md:rounded-tl-none mb-4" id="project-{{ loop.index }}">
+            <div class="p-8">
+              <div class="">
+                {% if project.gallery %}
+                  <div class="w-full flex flex-wrap mb-6 items-start md:-mx-2">
+                    <div class="w-full md:w-1/2 md:px-2">
+                      {% for project in project.gallery %}
+                        {% if loop.first %}
+                          <img src="{{ project.url }}" alt="{{ project.heading }}" class="w-full mb-4" />
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                    <div class="w-full md:w-1/2 md:px-2">
+                      <div class="flex flex-wrap -mx-2">
+                        {% for project in project.gallery %}
+                          {% if not loop.first %}
+                            <img src="{{ project.url }}" alt="{{ project.heading }}" class="w-1/2 rounded px-2 mb-4" />
+                          {% endif %}
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+
+                <div class="text-primary prose-sm md:prose mb-5">
+                  <h2>{{ project.title }}</h2>
+                  {{ project.text }}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+{# Projects - Variant 3 #}
+<div class="bg-white py-8">
+  {% for project in projects %}
+    <div class="bg-white border-b border-gray-400 mx-8 md:mx-12">
+      <div class="{{ project.active ? 'mb-2' : 'mb-0' }}">
+        <button aria-expanded="false" aria-controls="project-{{ loop.index }}" class="text-primary text-left block w-full py-6 hover:text-secondary focus:text-secondary">
+          {{ project.heading }}
+        </button>
+      </div>
+      {% if project.active %}
+        <div class="pb-6" id="project-{{ loop.index }}">
+          <div class="flex flex-wrap w-full md:-mx-3">
+            {% if project.gallery %}
+              <div class="w-full md:w-5/12 md:px-3 mb-5 md:mb-0">
+                <img src="{{ project.gallery[0].url }}" alt="{{ project.heading }}" class="w-full rounded" />
+              </div>
+            {% endif %}
+
+            <div class="text-primary prose-sm md:prose mb-5{{ project.gallery.length > 0 ? ' w-full md:w-7/12 md:px-3' : ' w-full' }}">
+              {{ project.text }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
