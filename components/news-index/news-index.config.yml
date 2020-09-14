@@ -1,0 +1,57 @@
+title: News Index
+status: ready
+
+context:
+  posts:
+    -
+      title: Lorem ipsum dolor sit amet, consect adipiscing elit.
+      excerpt: >-
+        Aenean interdum congue fermem. Phasellus dapus nisi amet conset vitae con gue tristique.
+      url: '#'
+      thumbnail: 
+        src: https://placedog.net/650/300
+    -
+      title: Lorem ipsum dolor sit amet, consect adipiscing elit.
+      excerpt: >-
+        Aenean interdum congue fermem. Phasellus dapus nisi amet conset vitae con gue tristique.
+      url: '#'
+      thumbnail: 
+        src: https://placedog.net/650/300
+    -
+      title: Lorem ipsum dolor sit amet, consect adipiscing elit.
+      excerpt: >-
+        Aenean interdum congue fermem. Phasellus dapus nisi amet conset vitae con gue tristique.
+      url: '#'
+      thumbnail: 
+        src: https://placedog.net/650/300
+    -
+      title: Lorem ipsum dolor sit amet, consect adipiscing elit.
+      excerpt: >-
+        Aenean interdum congue fermem. Phasellus dapus nisi amet conset vitae con gue tristique.
+      url: '#'
+      thumbnail: 
+        src: https://placedog.net/650/300
+    -
+      title: Lorem ipsum dolor sit amet, consect adipiscing elit.
+      excerpt: >-
+        Aenean interdum congue fermem. Phasellus dapus nisi amet conset vitae con gue tristique.
+      url: '#'
+      thumbnail: 
+        src: https://placedog.net/650/300
+    -
+      title: Lorem ipsum dolor sit amet, consect adipiscing elit.
+      excerpt: >-
+        Aenean interdum congue fermem. Phasellus dapus nisi amet conset vitae con gue tristique.
+      url: '#'
+      thumbnail: 
+        src: https://placedog.net/650/300
+  categories:
+    -
+      title: Uncategorized
+      url: '#'
+    -
+      title: Featured
+      url: '#'
+    -
+      title: General
+      url: '#'
