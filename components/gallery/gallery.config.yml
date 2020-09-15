@@ -1,0 +1,30 @@
+title: Gallery
+status: wip
+
+context:
+  gallery:
+    -
+      active: true
+      image:
+        src: https://placedog.net/650/450
+        title: Dan Farrow
+    -
+      active: false
+      image: 
+        src: https://placedog.net/650/450
+        title: Dan Farrow
+    -
+      active: false
+      image: 
+        src: https://placedog.net/650/450
+        title: Dan Farrow
+    -
+      active: false
+      image: 
+        src: https://placedog.net/650/450
+        title: Dan Farrow
+    -
+      active: false
+      image: 
+        src: https://placedog.net/650/450
+        title: Dan Farrow

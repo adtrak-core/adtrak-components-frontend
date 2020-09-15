@@ -1,0 +1,29 @@
+title: Areas Covered
+status: wip
+
+context:
+  locations:
+    -
+      title: Nottingham
+      url: '#'
+      number: 0115 000 0000
+    -
+      title: Lincoln
+      url: '#'
+      number: 0115 000 0000
+    -
+      title: Derby
+      url: '#'
+      number: 0115 000 0000
+    -
+      title: Area 4
+      url: '#'
+      number: 0115 000 0000
+    -
+      title: Area 5
+      url: '#'
+      number: 0115 000 0000
+    -
+      title: Area 6
+      url: '#'
+      number: 0115 000 0000
