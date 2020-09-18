@@ -1,13 +1,14 @@
 {# Why Choose Us - Variant 2 #}
-<div class="bg-secondary py-6">
-  <div class="container">
+<div class="py-6 bg-primary">
+  <div class="container overflow-x-hidden">
     <div class="flex flex-wrap md:-mx-5">
       {% for usp in whyChooseUs %}
-        <div class="w-full md:w-1/4 md:px-5 mb-5 md:mb-0">
-          <div class="rounded-full w-24 h-24 bg-white mx-auto shadow-md mb-6">
+        <div class="w-full mb-5 md:w-1/4 md:px-5 md:mb-0">
+          <div class="w-24 h-24 mx-auto mb-6 bg-white rounded-full shadow-md">
+            {# @INTERGATION : Uncomment this for the icon from ACF #}
+            {# {{ function('icon', usp.icon, 'w-12 h-12 m-auto') }} #}
           </div>
-
-          <span class="block leading-tight text-white text-center">{{ usp.text }}</span>
+          <span class="block leading-tight text-center text-white">{{ usp.reason }}</span>
         </div>
       {% endfor %}
     </div>
