@@ -1,0 +1,55 @@
+{% set sumratings = 0 %}
+{% for review in reviews %}
+	{% set sumratings = sumratings + review.rating %}
+{% endfor %}
+
+<div class="py-5">
+  <div class="container">
+    <div class="flex flex-wrap">
+      <div class="w-full md:w-1/3 lg:w-1/4">
+        <div class="mb-4 text-secondary">
+          {% for item in range(1, (sumratings / reviews | length) | round(0, 'ceil')) %}
+            {# @TODO Star here #}
+            {# <i class="fas fa-star text-primary text-lg xl:text-xl"></i> #}
+            []
+          {% endfor %}
+        </div>
+
+        <div class="flex flex-wrap mb-6 md:mb-0">
+          <div class="mr-12">
+            <span class="text-gray-500">Rated</span>
+            <span class="text-3xl text-primary font-bold block leading-tight">{{  (sumratings / reviews | length) | round(2, 'floor') }}</span>
+          </div>
+
+          <div class="">
+            <span class="text-gray-500">Based on</span>
+            <span class="text-3xl text-primary font-bold block leading-tight">{{ reviews | length(1) }} reviews</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full md:w-2/3 lg:w-3/4 ml-auto">
+        <ul class="flex flex-wrap md:-mx-5">
+          {% if reviews | default(false) %}
+            {% for review in reviews %}
+              <li class="w-full md:flex-1 md:px-5 mb-6 md:mb-0">
+                <div class="mb-3">
+                  <p class="trim text-primary">{{ review.comments | default(false) | length > 50 ? review.comments | slice(0, 120) ~ '&hellip;' : review.comments  }}</p>
+                </div>
+
+                <div>
+                  {% for item in range(1, review.rating) %}
+                    <i class="fas fa-star text-secondary text-sm"></i>
+                  {% endfor %}
+                  <span class="text-sm text-gray-500">({{ review.rating }}/5)</span>
+                </div>
+
+                <span class="text-sm text-gray-500">{{ review.reviewer.first_name }} {{ review.reviewer.last_name }}</span>
+                <span class="text-sm text-gray-500">{{ review.date_formatted}}</span>
+              </li>
+            {% endfor %}
+          {% endif %}
+        </ul>
+    </div>
+  </div>
+</div>

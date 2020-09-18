@@ -1,0 +1,26 @@
+title: Reviews
+status: wip
+
+context:
+  reviews:
+    -
+      comments: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      date_formatted: 12/07/2020
+      rating: 4
+      reviewer:
+        first_name: Dan Farrow
+    -
+      comments: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      date_formatted: 12/07/2020
+      rating: 4
+      reviewer:
+        first_name: Dan Farrow
+    -
+      comments: >-
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      date_formatted: 12/07/2020
+      rating: 4
+      reviewer:
+        first_name: Dan Farrow
