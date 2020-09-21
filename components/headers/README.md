@@ -1,11 +1,7 @@
 ## WordPress Integration
 
-When integrating the header component into the Adtrak WordPress boilerplate, use the following include to pass WP data into the component:
+When integrating the header component into the Adtrak WordPress boilerplate, use the following include to pass WP data into the component, it will work with the base "primary" and "secondary" menu pulled in from WordPress
 
-@todo finish this include properly...
 ```
-{% include 'components/header.twig' with {
-    topNav: query-here,
-    nav: query-here
-} only %}
+{% include "_components/header.twig" %}
 ```

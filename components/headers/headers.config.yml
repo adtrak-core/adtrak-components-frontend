@@ -1,39 +1,50 @@
-title: Headers
+Title: Headers
 status: ready
 
 context:
   topNavUsps:
     - Lorem <strong>ipsum dolor</strong> sit amet
     - <strong>Aenean eu nisi</strong> ut nulla fringilla varius
-  topNav:
-    -
-      title: Home
-      href: '#'
-      active: true
-    -
-      title: About Us
-      href: '#'
-    -
-      title: Meet The Team
-      href: '#'
-    -
-      title: Gallery
-      href: '#'
-  nav:
-    -
-      title: Service One
-      href: '#'
-      active: true
-    -
-      title: Service Two
-      href: '#'
-    -
-      title: Service Three
-      href: '#'
-    -
-      title: Service Four
-      href: '#'
-    -
-      title: Service Five
-      href: '#'
-    
+  secondaryMenu:
+    items:
+      -
+        name: Home
+        link: '#'
+        current: true
+        class: 'wp-classes'
+      -
+        name: About Us
+        link: '#'
+        class: 'wp-classes'
+      -
+        name: Meet The Team
+        link: '#'
+        class: 'wp-classes'
+      -
+        name: Gallery
+        link: '#'
+        class: 'wp-classes'
+  primaryMenu:
+    items:
+      -
+        name: Service One
+        link: '#'
+        class: 'wp-classes'
+        current: true
+      -
+        name: Service Two
+        link: '#'
+        class: 'wp-classes'
+      -
+        name: Service Three
+        link: '#'
+        class: 'wp-classes'
+      -
+        name: Service Four
+        link: '#'
+        class: 'wp-classes'
+      -
+        name: Service Five
+        link: '#'
+        class: 'wp-classes'
+      
