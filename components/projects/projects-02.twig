@@ -1,27 +1,62 @@
 {# Projects - Variant 2 #}
-<div class="bg-gray-200 p-8">
-  {% for project in projects %}
-    <div class=" bg-white rounded-lg shadow-lg mb-4">
-      <div class="{{ project.active ? 'mb-2' : 'mb-0' }}">
-        <button aria-expanded="false" aria-controls="project-{{ loop.index }}" class="font-bold text-secondary text-left block w-full py-6 px-8 md:px-12 xl:px-20 hover:text-secondary-dark focus:text-secondary-dark">
-          {{ project.heading }}
-        </button>
-      </div>
-      {% if project.active %}
-        <div class="px-8 md:px-12 xl:px-20 pb-6" id="project-{{ loop.index }}">
-          <div class="flex flex-wrap w-full md:-mx-3">
-            {% if project.gallery %}
-              <div class="w-full md:w-5/12 md:px-3 mb-5 md:mb-0">
-                <img src="{{ project.gallery[0].url }}" alt="{{ project.heading }}" class="w-full rounded" />
-              </div>
-            {% endif %}
+<div class="p-8 bg-gray-200">
+    {% for project in projects %}
+    
+    {% if fractal %}
+        {% set gallery = project.gallery %}
+        {% set content = project.content %}
+    {% else %}
+        {% set gallery = project.meta('gallery') %}
+        {% set content = project.meta('content') %}
+    {% endif %}
 
-            <div class="text-primary prose-sm md:prose mb-5{{ project.gallery.length > 0 ? ' w-full md:w-7/12 md:px-3' : ' w-full' }}">
-              {{ project.text }}
-            </div>
-          </div>
+    <div class="mb-4 bg-white rounded-lg shadow-lg ">
+        <div class="mb-2">
+            <button aria-expanded="false" aria-controls="project-{{ loop.index }}"
+                class="block w-full px-8 py-6 font-bold text-left project-control text-secondary md:px-12 xl:px-20 hover:text-secondary-dark focus:text-secondary-dark">
+                {{ project.title }}
+            </button>
         </div>
-      {% endif %}
+        
+        <div class="px-8 pb-6 project-pane md:px-12 xl:px-20" id="project-{{ loop.index }}">
+            <div class="flex flex-wrap w-full md:-mx-3">
+                {% if gallery %}
+                <div class="w-full mb-5 md:w-5/12 md:px-3 md:mb-0">
+                    
+                    {% if fractal %}
+                      <img src="{{ gallery[0].url }}" alt="{{ gallery[0].alt ? gallery[0].alt : project.heading }}"
+                        class="w-full rounded lazyload project-gallery-feature" />
+                    {% else %}
+                      <img data-src="{{ gallery[0].url|resize('600') }}" alt="{{ gallery[0].alt ? gallery[0].alt : project.heading }}" class="w-full rounded lazyload project-gallery-feature" />
+                    {% endif %}
+
+                    {% if gallery|length > 0 %}
+                        <div class="flex flex-wrap">
+                            {% for image in gallery %}
+                                {% if not loop.first %}
+                                    {% if fractal %}
+                                      <img data-feature="{{ image.url }}" src="{{ image.url }}" alt="{{ image.alt ? image.alt : project.heading }}"
+                                    class="w-1/2 p-2 cursor-pointer project-gallery-thumb md:w-1/4 lazyload" />
+                                    {% else %}
+                                      <img data-feature="{{ image.url|resize('1200') }}" data-src="{{ image.url|resize('600') }}"
+                                      alt="{{ image.alt ? image.alt : project.heading }}"
+                                      class="w-1/2 p-2 cursor-pointer project-gallery-thumb md:w-1/4 lazyload" />
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                <div
+                    class="text-primary prose-sm md:prose mb-5{{ project.gallery|length > 0 ? ' w-full md:w-7/12 md:px-3' : ' w-full' }}">
+                    <h2>{{ project.heading }}</h2>
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+        
     </div>
-  {% endfor %}
+    {% endfor %}
 </div>
