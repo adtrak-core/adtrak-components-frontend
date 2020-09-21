@@ -10,7 +10,7 @@
 					{%- set el = 'a' -%}
 				{%- endif -%}
 				<{{el}} {% if logo.link %} href="{{ logo.link }}" target="_blank" rel="nofollow noreferrer" {% endif %} class="w-auto mb-4 md:px-4 lg:mb-0 {% if logo.link %}transition duration-300 hover:opacity-75{% endif %}">
-					<img class="self-center inline-block h-auto m-2 lazyload max-h-8" src="{{ logo.src }}" alt="{{ logo.name }} Logo"/>
+					<img class="self-center inline-block h-auto m-2 lazyload max-h-8" src="{{ logo.image.url }}" alt="{{ logo.name }} Logo"/>
 				{# @INTERGATION : Uncomment this for the logo image from ACF #}
 					{# <img class="self-center inline-block h-auto m-2 lazyload max-h-8" data-src="{{ logo.image.url|tojpg|letterbox('130', '90', '#fff') }}" alt="{{ logo.name }} Logo" /> #}
 				</{{el}}>

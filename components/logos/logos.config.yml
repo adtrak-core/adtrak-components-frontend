@@ -6,22 +6,28 @@ context:
   logos:
     -
       name: Logo Name
-      src: https://placekitten.com/130/90
       link: https://www.adtrak.co.uk
+      image: 
+          url: https://placekitten.com/130/90
     -
       name: Logo Name
-      src: https://placedog.net/120/90
+      image: 
+          url: https://placedog.net/120/90
     -
       name: Logo Name
-      src: https://placekitten.com/150/90
       link: https://www.adtrak.co.uk
+      image: 
+          url: https://placekitten.com/150/90
     -
       name: Logo Name
-      src: https://placedog.net/90/90
+      image: 
+          url: https://placedog.net/90/90
     -
       name: Logo Name
-      src: https://placekitten.com/123/90
       link: https://www.adtrak.co.uk
+      image: 
+          url: https://placekitten.com/123/90
     -
       name: Logo Name
-      src: https://placedog.net/113/90
+      image: 
+          url: https://placedog.net/113/90
