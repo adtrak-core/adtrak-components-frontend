@@ -31,10 +31,10 @@
                 {% if loop.first %}
                   {% if fractal %}
                       <img src="{{ image.url }}" alt="{{ image.alt ? image.alt : project.heading }}"
-                    class="w-full mb-4 lazyload project-gallery-feature project-{{ project.heading|lower|replace({" ":"-"}) }}" />
+                    class="w-full mb-4 lazyload project-{{ project.heading|lower|replace({" ":"-"}) }}" />
                     {% else %}
                       <img data-src="{{ image.url|resize('600') }}" alt="{{ image.alt ? image.alt : project.heading }}"
-                        class="w-full mb-4 lazyload project-gallery-feature project-{{ project.heading|lower|replace({" ":"-"}) }}" />
+                        class="w-full mb-4 lazyload project-{{ project.heading|lower|replace({" ":"-"}) }}" />
                     {% endif %}
                   {% endif %}
                 {% endfor %}

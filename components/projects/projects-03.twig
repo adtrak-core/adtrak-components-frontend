@@ -23,10 +23,10 @@
                 {% if gallery %}
                 <div class="w-full mb-5 md:w-5/12 md:px-3 md:mb-0">
                     {% if fractal %}
-                      <img src="{{ gallery[0].url }}" alt="{{ gallery[0].alt ? gallery[0].alt : project.heading }}" class="w-full rounded lazyload project-gallery-feature project-{{ project.heading|lower|replace({" ":"-"}) }}" />
+                      <img src="{{ gallery[0].url }}" alt="{{ gallery[0].alt ? gallery[0].alt : project.heading }}" class="w-full rounded lazyload project-{{ project.heading|lower|replace({" ":"-"}) }}" />
                     {% else %}
                       <img data-src="{{ gallery[0].url|resize('1200') }}" alt="{{ gallery[0].alt ? gallery[0].alt : project.heading }}"
-                        class="w-full rounded lazyload project-gallery-feature project-{{ project.heading|lower|replace({" ":"-"}) }}" />
+                        class="w-full rounded lazyload project-{{ project.heading|lower|replace({" ":"-"}) }}" />
                     {% endif %}
 
                     {% if gallery|length > 0 %}
