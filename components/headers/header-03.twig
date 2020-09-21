@@ -23,7 +23,7 @@
           >
             <ul class="flex flex-wrap items-center justify-end menu-secondary-js">
               {% for item in secondaryMenu.items %}
-                <li><a class="block px-5 py-3 text-sm uppercase tracking-wider text-white hover:text-primary focus:text-primary{{ item.current ? ' text-primary ' : ' text-white' }}" href="{{ item.link }}">{{ item.name }}</a></li>
+                <li><a class="block px-5 py-3 text-sm uppercase tracking-wider text-white hover:text-primary focus:text-primary {{ item.class }} {{ item.current ? ' text-primary ' : ' text-white' }}" href="{{ item.link }}">{{ item.name }}</a></li>
                 <li><span class="block w-1 h-1 bg-white opacity-25"></span></li>
               {% endfor %}
             </ul>
@@ -48,12 +48,13 @@
         </svg>
       </a>
 
+      {# @INTEGRATION - Swap with below for LD #}
       <a class="text-xl block ml-auto text-primary hover:text-secondary focus:text-secondary" href="#"><span class="hidden lg:inline">Call <span class="font-bold">Location</span> On </span><span class="font-bold">0800 000 0000</span></a>
 
-      {# Mobile menu toggle button #}
-      {# <button class="border border-gray-300 rounded-md md:hidden ml-auto px-3 py-2 text-primary hover:border-primary focus:border-primary" target="_blank">
-        Menu
-      </button> #}
+      {# @INTEGRATION - Uncomment this for proper LD phone number #}
+      {# <span class="text-xl block ml-auto text-primary">
+        {% do action('ld_default', true) %}
+      </span> #}
     </div>
   </div>
 
@@ -69,7 +70,7 @@
         >
           <ul class="flex flex-wrap items-center xl:justify-end menu-primary-js">
             {% for item in primaryMenu.items %}
-              <li class="flex-1 text-center"><a class="block pl-0 px-5 py-5 text-sm lg:text-base xl:text-lg text-primary hover:text-secondary focus:text-secondary" href="{{ item.link }}">{{ item.name }}</a></li>
+              <li class="flex-1 text-center"><a class="block pl-0 px-5 py-5 text-sm lg:text-base xl:text-lg text-primary hover:text-secondary focus:text-secondary {{ item.class }} {% if item.current %} text-secondary{% endif %}" href="{{ item.link }}">{{ item.name }}</a></li>
             {% endfor %}
           </ul>
         </nav>
