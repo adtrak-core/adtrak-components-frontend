@@ -5,3 +5,5 @@ When integrating the header component into the Adtrak WordPress boilerplate, use
 ```
 {% include "_components/header.twig" %}
 ```
+
+There are a few areas with `@INTEGRATION` comments, for example, the contact link and the location dynamics, please do a file search for `@INTEGRATION` and follow the comments instructions to finalise the component.
