@@ -31,10 +31,10 @@
                 {% if loop.first %}
                   {% if fractal %}
                       <img src="{{ image.url }}" alt="{{ image.alt ? image.alt : project.heading }}"
-                    class="w-full mb-4 lazyload project-gallery-feature" />
+                    class="w-full mb-4 lazyload project-gallery-feature project-{{ project.heading|lower|replace({" ":"-"}) }}" />
                     {% else %}
                       <img data-src="{{ image.url|resize('600') }}" alt="{{ image.alt ? image.alt : project.heading }}"
-                        class="w-full mb-4 lazyload project-gallery-feature" />
+                        class="w-full mb-4 lazyload project-gallery-feature project-{{ project.heading|lower|replace({" ":"-"}) }}" />
                     {% endif %}
                   {% endif %}
                 {% endfor %}
@@ -44,11 +44,11 @@
                   {% for image in gallery %}
                   {% if not loop.first %}
                     {% if fractal %}
-                      <img data-feature="{{ image.url }}" src="{{ image.url }}"
+                      <img data-project-feature="project-{{ project.heading|lower|replace({" ":"-"}) }}" data-feature="{{ image.url }}" src="{{ image.url }}"
                         alt="{{ image.alt ? image.alt : project.heading }}"
                         class="w-1/2 px-2 mb-4 rounded cursor-pointer lazyload project-gallery-thumb" />
                     {% else %}
-                      <img data-feature="{{ image.url|resize('1200') }}" data-src="{{ image.url|resize('600') }}"
+                      <img data-project-feature="project-{{ project.heading|lower|replace({" ":"-"}) }}" data-feature="{{ image.url|resize('1200') }}" data-src="{{ image.url|resize('600') }}"
                         alt="{{ image.alt ? image.alt : project.heading }}"
                         class="w-1/2 px-2 mb-4 rounded cursor-pointer lazyload project-gallery-thumb" />
                     {% endif %}
