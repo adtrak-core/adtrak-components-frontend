@@ -1,14 +1,25 @@
 title: Heros
-status: wip
+status: ready
 
 context:
   subHeading: Service in <strong>location</strong>
   heading: Lorem ipsum dolor sit amet, adipicising etim consectetur.
   blurb: >- 
-    Etiam eu fringilla nisl. Vivamus quis vehicula metus. Suspendi dui erat, volutpat eu mauris sed, eleifend ultrices nulla.
-  btns: true
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+  btns: 
+    -
+      href: '#'
+      text: 'Example Button'
+    -
+      href: '#'
+      text: 'Example Button'
   usps:
-    - Lorem <strong>ipsum dolor</strong> sit amet
-    - Aenean eu nisi ut nulla <strong>fringilla varius</strong>
-    - Ipsum dolor <strong>eu nisi</strong> ut nulla fringilla varius
-  bgImage: http://placekitten.com/500/500
+    - 
+      text: Lorem <strong>ipsum dolor</strong> sit amet
+    - 
+      text: Aenean eu nisi ut nulla <strong>fringilla varius</strong>
+    - 
+      text: Ipsum dolor <strong>eu nisi</strong> ut nulla fringilla varius
+  image: 
+    url: http://placekitten.com/500/500
+    title: Kitten
