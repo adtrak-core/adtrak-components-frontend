@@ -1,2 +1,54 @@
 title: Footer
 status: ready
+
+context:
+  fractal: true
+  options:
+    site_email: test@test.com
+    reg_number: 012345678
+    vat_number: 098765432
+    social_facebook: https://facebook.com
+    social_twitter: https://facebook.com
+    social_instagram: https://facebook.com
+    social_other:
+      -
+        name: Twitter
+        url: https://twitter.com
+  site:
+    title: Site Title
+  primaryMenu:
+    items:
+      -
+        name: "Service One"
+        class: "custom-class"
+        url: "#"
+      -
+        name: "Service One"
+        class: "custom-class"
+        url: "#"
+      -
+        name: "Service One"
+        class: "custom-class"
+        url: "#"
+      -
+        name: "Service One"
+        class: "custom-class"
+        url: "#"
+  secondaryMenu:
+    items:
+      -
+        name: "About One"
+        class: "custom-class"
+        url: "#"
+      -
+        name: "About One"
+        class: "custom-class"
+        url: "#"
+      -
+        name: "About One"
+        class: "custom-class"
+        url: "#"
+      -
+        name: "About One"
+        class: "custom-class"
+        url: "#"

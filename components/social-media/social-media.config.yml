@@ -1,0 +1,12 @@
+title: Social Media
+status: ready
+
+context:
+  options:
+    social_facebook: https://facebook.com
+    social_twitter: https://facebook.com
+    social_instagram: https://facebook.com
+    social_other:
+      -
+        name: Twitter
+        url: https://twitter.com

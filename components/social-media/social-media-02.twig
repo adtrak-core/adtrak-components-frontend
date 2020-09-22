@@ -1,0 +1,20 @@
+{# Social Media - Variant 2 #}
+<div class="p-8">
+  <span class="block font-bold text-2xl md:text-3xl text-primary-dark pb-2">Follow us on Social Media!</span>
+
+  <div class="inline-block">
+    {% if options.social_facebook %}
+      <a href="{{ options.social_facebook }}" class="inline-block border-2 border-primary-light text-primary-light hover:border-primary focus:border-primary hover:text-primary focus:text-primary text-lg px-4 py-2 mr-2 my-2 rounded">Facebook</a>
+    {% endif %}
+    {% if options.social_twitter %}
+      <a href="{{ options.social_twitter }}" class="inline-block border-2 border-primary-light text-primary-light hover:border-primary focus:border-primary hover:text-primary focus:text-primary text-lg px-4 py-2 mr-2 my-2 rounded">Twitter</a>
+    {% endif %}
+    {% if options.social_instagram %}
+      <a href="{{ options.social_instagram }}" class="inline-block border-2 border-primary-light text-primary-light hover:border-primary focus:border-primary hover:text-primary focus:text-primary text-lg px-4 py-2 mr-2 my-2 rounded">Instagram</a>
+    {% endif %}
+
+    {% for item in options.social_other %}
+      <a href="{{ item.url }}" class="inline-block border-2 border-primary-light text-primary-light hover:border-primary focus:border-primary hover:text-primary focus:text-primary text-lg px-4 py-2 mr-2 my-2 rounded">{{ item.name }}</a>
+    {% endfor %}
+  </div>
+</div>

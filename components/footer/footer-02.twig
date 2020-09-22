@@ -2,7 +2,13 @@
 <footer class="bg-primary text-white">
   <div class="py-12 bg-primary-dark">
     <div class="container">
-      <span class="block text-2xl text-center leading-tight"><span class="text-primary-light">Lorem ipsum dolor sit amet consec?</span> Call for <span class="font-bold">free advice</span> on <a href="#" class="inline-block text-secondary font-bold hover:text-secondary-dark focus:text-secondary-dark">0800 000 000</a> or <a href="#" class="bg-secondary hover:bg-secondary-dark focus:bg-secondary-dark text-white px-4 py-2 inline-block rounded text-base ml-3">Contact Online</a></span>
+      {% if fractal %}
+        <span class="block text-2xl text-center leading-tight"><span class="text-primary-light">Lorem ipsum dolor sit amet consec?</span> Call for <span class="font-bold">free advice</span> on <a href="tel:08000000000" class="inline-block text-secondary font-bold hover:text-secondary-dark focus:text-secondary-dark">0800 000 000</a> or <a href="/contact" class="bg-secondary hover:bg-secondary-dark focus:bg-secondary-dark text-white px-4 py-2 inline-block rounded text-base ml-3">Contact Online</a></span>
+      {% else %}
+        {# @INTEGRATION - double check this /contact path is correct #}
+        {# @INTEGRATION - update your footer "CTA" text here #}
+        <span class="block text-2xl text-center leading-tight"><span class="text-primary-light">Lorem ipsum dolor sit amet consec?</span> Call for <span class="font-bold">free advice</span> on <span class="inline-block text-secondary font-bold hover:text-secondary-dark focus:text-secondary-dark">{% do action('ld_default') %}</span> or <a href="/contact" class="bg-secondary hover:bg-secondary-dark focus:bg-secondary-dark text-white px-4 py-2 inline-block rounded text-base ml-3">Contact Online</a></span>
+      {% endif %}
     </div>
   </div>
 
@@ -11,49 +17,62 @@
       <div class="flex flex-wrap sm:-mx-5 justify-center">
         <div class="w-full sm:w-1/2 md:w-1/4 sm:px-5 mb-8 md:mb-0">
           <address class="not-italic">
-            <span class="block" property="name">Company Name</span>
-            <span class="block" property="addressLocality">123 Main Road</span>
-            <span class="block" property="addressRegion">Location</span>
-            <span class="block" property="postalCode">AB12 3CD</span>
-            <span class="block" property="addressCountry">United Kingdom</span>
+            {% if fractal %}
+              <span class="block" property="name">Company Name</span>
+              <span class="block" property="addressLocality">123 Main Road</span>
+              <span class="block" property="addressRegion">Location</span>
+              <span class="block" property="postalCode">AB12 3CD</span>
+              <span class="block" property="addressCountry">United Kingdom</span>
+            {% else %}
+              {{ function('address_stacked') }}</p>
+            {% endif %}
           </address>
         </div>
         
         <div class="w-full sm:w-1/2 md:w-1/4 sm:px-5 mb-8 md:mb-0">
-          <a href="mailto:info@domainname.co.uk" class="block no-underline break-words hover:text-secondary focus:text-secondary">info@domainname.co.uk</a>
-          <a href="tel:0800000000" class="block no-underline mb-5 hover:text-secondary focus:text-secondary">0800 000 0000</a>
+          {% if options.site_email %}
+            <a href="mailto:{{ options.site_email }}" class="block no-underline break-words hover:text-secondary focus:text-secondary">{{ options.site_email }}</a>
+          {% endif %}
+          {% if fractal %}
+            <a href="tel:0800000000" class="block no-underline mb-5 hover:text-secondary focus:text-secondary">0800 000 0000</a>
+          {% else %}
+            <span class="mb-5 block">
+              {% do action('ld_default') %}
+            </span>
+          {% endif %}
         </div>
 
-        <div class="w-full sm:w-1/2 md:w-1/4 sm:px-5 mb-8 md:mb-0">
-          <span class="block text-primary-light uppercase tracking-widest mb-5">Services</span>
-          <nav
-            role="navigation"
-            aria-label="Footer Services Navigation"
-          >
-            <ul>
-              <li class="mb-2"><a href="#" class="text-white hover:text-secondary focus:text-secondary">Service One</a></li>
-              <li class="mb-2"><a href="#" class="text-white hover:text-secondary focus:text-secondary">Service One</a></li>
-              <li class="mb-2"><a href="#" class="text-white hover:text-secondary focus:text-secondary">Service One</a></li>
-              <li class="mb-2"><a href="#" class="text-white hover:text-secondary focus:text-secondary">Service One</a></li>
-              <li class="mb-2"><a href="#" class="text-white hover:text-secondary focus:text-secondary">Service One</a></li>
-            </ul>
-          </nav>
-        </div>
+        {% if primaryMenu.items %}
+          <div class="w-full sm:w-1/2 md:w-1/4 sm:px-5 mb-8 md:mb-0">
+            <span class="block text-primary-light uppercase tracking-widest mb-5">Services</span>
+            <nav
+              role="navigation"
+              aria-label="Footer Services Navigation"
+            >
+              <ul>
+                {% for item in primaryMenu.items %}
+                  <li class="{% if not loop.last %}mb-2{% endif %}"><a href="{{ item.url }}" class="text-white hover:text-secondary focus:text-secondary {{ item.class }}">{{ item.name }}</a></li>
+                {% endfor %}
+              </ul>
+            </nav>
+          </div>
+        {% endif %}
 
-        <div class="w-full sm:w-1/2 md:w-1/4 sm:px-5 mb-8 md:mb-0">
-          <span class="block text-primary-light uppercase tracking-widest mb-5">Company</span>
-          <nav
-            role="navigation"
-            aria-label="Footer Company Navigation"
-          >
-            <ul>
-              <li class="mb-2"><a href="#" class="text-white hover:text-secondary focus:text-secondary">Company One</a></li>
-              <li class="mb-2"><a href="#" class="text-white hover:text-secondary focus:text-secondary">Company One</a></li>
-              <li class="mb-2"><a href="#" class="text-white hover:text-secondary focus:text-secondary">Company One</a></li>
-              <li class="mb-2"><a href="#" class="text-white hover:text-secondary focus:text-secondary">Company One</a></li>
-            </ul>
-          </nav>
-        </div>
+        {% if secondaryMenu.items %}
+          <div class="w-full sm:w-1/2 md:w-1/4 sm:px-5 mb-8 md:mb-0">
+            <span class="block text-primary-light uppercase tracking-widest mb-5">Company</span>
+            <nav
+              role="navigation"
+              aria-label="Footer Company Navigation"
+            >
+              <ul>
+                {% for item in secondaryMenu.items %}
+                  <li class="{% if not loop.last %}mb-2{% endif %}"><a href="{{ item.url }}" class="text-white hover:text-secondary focus:text-secondary {{ item.class }}">{{ item.name }}</a></li>
+                {% endfor %}
+              </ul>
+            </nav>
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -62,11 +81,11 @@
     <div class="container">
       <div class="flex flex-wrap items-center">
         <div class="w-full md:flex-1 mb-8 md:mb-0">
-          <span class="block text-primary-light text-sm">Company Name Ltd is a registered company in England. Registered Number: 1234567. VAT Number: 987654321.<br/>© Company Name Ltd 2020. All Rights Reserved.</span>
+          <span class="block text-primary-light text-sm">{{ site.title }} is a registered company in England.{% if options.reg_number %} Registered Number: {{ options.reg_number }}.{% endif %}{% if options.vat_number %} VAT Number: {{ options.vat_number }}.{% endif %}<br/>© {{ site.title }} {{ 'now' | date('Y') }}. All Rights Reserved.</span>
         </div>
         <div class="w-full md:w-auto md:ml-auto">
           {# Logo #}
-          <a href="#" class="block md:mb-6 xl:mb-0">
+          <a href="https://adtrak.co.uk" target="_blank" rel="noopener noreferrer" class="block md:mb-6 xl:mb-0">
             <svg class="w-24" viewBox="0 0 160 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M26.639 9.057v25.3h-4.131l-.499-3.075c-2.256 2.318-5.404 3.707-9.035 3.707C5.55 34.987 0 29.29 0 21.71 0 14.104 5.55 8.453 12.974 8.453c3.673 0 6.852 1.408 9.114 3.767l.599-3.164h3.952zm-5.133 12.651c0-4.767-3.433-8.301-8.129-8.301-4.695 0-8.162 3.563-8.162 8.301 0 4.736 3.464 8.302 8.162 8.302 4.699 0 8.129-3.534 8.129-8.302zM56.806 0v34.37h-3.873l-.66-2.869C50.033 33.694 46.971 35 43.475 35c-7.535 0-12.953-5.697-12.953-13.28 0-7.617 5.418-13.268 12.953-13.268 3.198 0 6.033 1.084 8.208 2.944V0h5.123zM43.879 30.02c4.695 0 8.162-3.597 8.162-8.3 0-4.737-3.464-8.302-8.162-8.302s-8.128 3.533-8.128 8.301c0 4.768 3.432 8.302 8.128 8.302zM76.895 29.646v4.725h-3.807c-5.457 0-8.827-3.421-8.827-9.008V13.525h-4.455v-1.007l8.666-9.356h.872v5.905h7.414v4.455h-7.374V24.95c0 3.017 1.653 4.696 4.67 4.696h2.841zM95.33 8.928v4.912h-2.705c-4.237 0-6.351 2.453-6.351 7.036v13.492H81.15V9.07h3.464l.868 3.453c1.782-2.398 4.226-3.595 7.63-3.595h2.217zM122.736 9.057v25.3h-4.131l-.499-3.075c-2.256 2.318-5.404 3.707-9.035 3.707-7.421 0-12.974-5.696-12.974-13.28 0-7.604 5.55-13.255 12.974-13.255 3.673 0 6.852 1.408 9.115 3.767l.598-3.164h3.952zM117.6 21.708c0-4.767-3.432-8.301-8.128-8.301s-8.163 3.566-8.163 8.301c0 4.736 3.465 8.302 8.163 8.302 4.696-.003 8.128-3.534 8.128-8.302zM135.434 23.577h-3.106V34.37h-5.123V0h5.123v18.852h3.142l6.726-9.785h6.072l-8.437 12.143 9.333 13.158h-6.261l-7.469-10.791z"
