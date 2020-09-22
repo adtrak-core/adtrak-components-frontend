@@ -9,7 +9,7 @@
         {% set gallery = project.meta('gallery') %}
         {% set content = project.meta('content') %}
     {% endif %}
-
+    
     <div class="mb-4 bg-white rounded-lg shadow-lg ">
         <div class="mb-2">
             <button aria-expanded="false" aria-controls="project-{{ loop.index }}"
@@ -18,6 +18,8 @@
             </button>
         </div>
         
+        {# @INTEGRATIOn - Remove this if #}
+        {% if loop.first %}
         <div class="px-8 pb-6 project-pane md:px-12 xl:px-20" id="project-{{ loop.index }}">
             <div class="flex flex-wrap w-full md:-mx-3">
                 {% if gallery %}
@@ -31,16 +33,16 @@
                     {% endif %}
 
                     {% if gallery|length > 0 %}
-                        <div class="flex flex-wrap">
+                        <div class="flex flex-wrap -mx-2 mt-1">
                             {% for image in gallery %}
                                 {% if not loop.first %}
                                     {% if fractal %}
                                       <img data-feature="{{ image.url }}" src="{{ image.url }}" alt="{{ image.alt ? image.alt : project.heading }}"
-                                    class="w-1/2 p-2 cursor-pointer project-gallery-thumb md:w-1/4 lazyload" />
+                                    class="w-1/2 p-2 cursor-pointer project-gallery-thumb md:w-1/4 lazyload rounded" />
                                     {% else %}
                                       <img data-feature="{{ image.url|resize('1200') }}" data-src="{{ image.url|resize('600') }}"
                                       alt="{{ image.alt ? image.alt : project.heading }}"
-                                      class="w-1/2 p-2 cursor-pointer project-gallery-thumb md:w-1/4 lazyload" />
+                                      class="w-1/2 p-2 cursor-pointer project-gallery-thumb md:w-1/4 lazyload rounded" />
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}
@@ -56,6 +58,8 @@
                 </div>
             </div>
         </div>
+        {# @INTEGRATIOn - Remove this if #}
+        {% endif %}
         
     </div>
     {% endfor %}

@@ -6,11 +6,9 @@ context:
   projects:
     - 
       title: Project 1 Title
-      heading: Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+      heading: Lorem ipsum dolor sit amet, consectetur?
       content: >-
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel diam erat. Nulla volutpat elementum velit at suscipit. Aenean tristique sed sem quis elementum. Vestibulum convallis dolor id diam vehicula, a ultricies dui accumsan. Donec ut metus iaculis, mollis ex ac, sodales felis.</p>
-
-        <p>Morbi in condimentum massa, vitae efficitur massa. Cras vestibulum eu leo eget pharetra. In hac habitasse platea dictumst. Ut et nulla tincidunt, hendrerit ex sed.</p>
       gallery:
         - 
           url: https://placedog.net/650/450
