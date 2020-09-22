@@ -1,6 +1,6 @@
 ## WordPress Integration
 
-When integrating the hero component into the Adtrak WordPress boilerplate, imprt the ACF file from this component and use the following include to pass WP data into the component:
+When integrating the hero component into the Adtrak WordPress boilerplate, import the ACF file from assets tab of this component and use the following include to pass WP data into the component:
 
 ```
 {% include '_components/hero.twig' with { 
