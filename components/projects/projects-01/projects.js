@@ -40,11 +40,16 @@ if (Object.keys(projectControls).length > 0) {
 
 // Control gallery thumbnails
 const galleryThumbs = document.querySelectorAll('.project-gallery-thumb');
-const galleryFeature = document.querySelector('.project-gallery-feature');
 
 function switchProjectImage(event) {
-    let targetImage = event.target.dataset.feature;
-    galleryFeature.src = targetImage;
+    // Get the new image src
+    let featureSrc = event.target.dataset.feature;
+
+    // Find the target featured image
+    let projectFeature = event.target.dataset.projectFeature;
+
+    // Replace the target src with the new src
+    document.querySelector('.' + projectFeature).src = featureSrc;
 }
 
 if (Object.keys(galleryThumbs).length > 0) {
