@@ -1,0 +1,53 @@
+{# Buckets - Variant 2 #}
+<div class="bg-gray-200 py-8">
+  <div class="container">
+    <div class="flex flex-wrap md:-mx-5">
+      {% for bucket in buckets %}
+        <a href="{{ bucket.link }}" class="w-full md:w-1/2 lg:w-1/4 md:px-5 mb-8 lg:mb-0 group">
+          <div class="bg-white rounded-lg">
+            <div class="flex flex-wrap justify-center">
+              {% if bucket.thumbnail %}
+                {% if fractal %}
+                  <div class="w-full">
+                    <img class="rounded-t-lg block w-full mb-4" src="{{ bucket.thumbnail.src }}" alt="{{ bucket.thumbnail.title }}" />
+                  </div>
+                {% else %}
+                  <div class="w-full">
+                    {% include "_components/picture.twig" with {
+                      source: bucket.thumbnail.src,
+                      pictureClasses: "lazyload w-full block",
+                      lazyload: true,
+                      breakpoints: {
+                        "1280px" : {
+                          classes: 'w-full rounded-t-lg object-cover',
+                          w: 500,
+                          h: 250,
+                          crop: 'center'
+                        },
+                      },
+                      img: {
+                        classes: 'w-full rounded-t-lg object-cover',
+                        alt: bucket.thumbnail.title,
+                        w: 500,
+                        h: 200,
+                        crop: 'center',
+                      }
+                    } %}
+                  </div>
+                {% endif %}
+              {% endif %}
+
+              {% if bucket.post_title %}
+                <div class="w-full flex flex-wrap items-center p-4">
+                  <span class="block text-xl md:text-2xl uppercase tracking-wider leading-tight flex-1 group-hover:text-primary group-focus:text-primary">{{ bucket.post_title }}</span>
+
+                  <span class="bg-secondary group-hover:bg-primary group-focus:bg-primary text-center border-2 border-transparent rounded-md text-white block py-1 px-3 ml-auto">&raquo;</span>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

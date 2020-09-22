@@ -1,37 +1,38 @@
 title: Buckets
-status: wip
+status: ready
 
 context:
+  fractal: true
   buckets:
     -
-      image: 
+      thumbnail: 
         src: https://placedog.net/650/450
         title: Lovely Pooch
-      heading: <strong>Service</strong> One
+      post_title: <strong>Service</strong> One
       description: >-
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       link: '#'
     -
-      image: 
+      thumbnail: 
         src: https://placedog.net/650/450
         title: Lovely Pooch
-      heading: <strong>Service</strong> Two
+      post_title: <strong>Service</strong> Two
       description: >-
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       link: '#'
     -
-      image: 
+      thumbnail: 
         src: https://placedog.net/650/450
         title: Lovely Pooch
-      heading: <strong>Service</strong> Three
+      post_title: <strong>Service</strong> Three
       description: >-
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       link: '#'
     -
-      image: 
+      thumbnail: 
         src: https://placedog.net/650/450
         title: Lovely Pooch
-      heading: <strong>Service</strong> Four
+      post_title: <strong>Service</strong> Four
       description: >-
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       link: '#'
