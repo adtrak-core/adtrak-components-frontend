@@ -2,56 +2,79 @@ title: News Index
 status: ready
 
 context:
+  fractal: true
   posts:
     -
+      date: 23 September 2019
       title: Lorem ipsum dolor sit amet, consect adipiscing elit.
+      categories:
+        -
+          name: General
+          slug: general
       excerpt: >-
         Aenean interdum congue fermem. Phasellus dapus nisi amet conset vitae con gue tristique.
-      url: '#'
+      link: '#'
       thumbnail: 
         src: https://placedog.net/650/300
     -
+      date: 23 September 2019
       title: Lorem ipsum dolor sit amet, consect adipiscing elit.
       excerpt: >-
         Aenean interdum congue fermem. Phasellus dapus nisi amet conset vitae con gue tristique.
-      url: '#'
+      link: '#'
       thumbnail: 
         src: https://placedog.net/650/300
     -
+      date: 23 September 2019
       title: Lorem ipsum dolor sit amet, consect adipiscing elit.
       excerpt: >-
         Aenean interdum congue fermem. Phasellus dapus nisi amet conset vitae con gue tristique.
-      url: '#'
+      link: '#'
       thumbnail: 
         src: https://placedog.net/650/300
     -
+      date: 23 September 2019
       title: Lorem ipsum dolor sit amet, consect adipiscing elit.
+      categories:
+        -
+          name: General
+          slug: general
       excerpt: >-
         Aenean interdum congue fermem. Phasellus dapus nisi amet conset vitae con gue tristique.
-      url: '#'
+      link: '#'
       thumbnail: 
         src: https://placedog.net/650/300
     -
+      date: 23 September 2019
       title: Lorem ipsum dolor sit amet, consect adipiscing elit.
       excerpt: >-
         Aenean interdum congue fermem. Phasellus dapus nisi amet conset vitae con gue tristique.
-      url: '#'
+      link: '#'
       thumbnail: 
         src: https://placedog.net/650/300
     -
+      date: 23 September 2019
       title: Lorem ipsum dolor sit amet, consect adipiscing elit.
       excerpt: >-
         Aenean interdum congue fermem. Phasellus dapus nisi amet conset vitae con gue tristique.
-      url: '#'
+      link: '#'
       thumbnail: 
         src: https://placedog.net/650/300
   categories:
     -
-      title: Uncategorized
-      url: '#'
+      name: Uncategorized
+      slug: '#'
     -
-      title: Featured
-      url: '#'
+      name: Featured
+      slug: '#'
     -
-      title: General
-      url: '#'
+      name: General
+      slug: '#'
+  options:
+    social_facebook: https://facebook.com
+    social_twitter: https://facebook.com
+    social_instagram: https://facebook.com
+    social_other:
+      -
+        name: Twitter
+        url: https://twitter.com

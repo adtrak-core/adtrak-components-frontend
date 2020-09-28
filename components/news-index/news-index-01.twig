@@ -9,18 +9,28 @@
               <div class="bg-primary">
                 <div class="py-2 px-6">
                   <div class="flex flex-wrap -mx-1 text-white">
-                    <span class="inline-block px-1 text-sm flex-1">07/05/2020</span>
-                    <span class="inline-block px-1 text-sm w-auto ml-auto uppercase tracking-wider">General</span>
+                    <span class="inline-block px-1 text-sm flex-1">{{ post.date }}</span>
+                    {% for cat in post.categories | slice(0, 1) %}
+                      <span class="inline-block px-1 text-sm w-auto ml-auto uppercase tracking-wider">{{ cat.name }}</span>
+                    {% endfor %}
                   </div>
                 </div>
 
-                <img src={{ post.thumbnail.src }} alt="{{ post.title }}" class="w-full" />
+                {% if fractal %}
+                  {% if post.thumbnail %}
+                    <img src={{ post.thumbnail.src }} alt="{{ post.title }}" class="w-full" />
+                  {% endif %}
+                {% else %}
+                  {% if post.thumbnail %}
+                    <img src={{ post.thumbnail.src | resize(600, 350, 'center') }} alt="{{ post.title }}" class="w-full" />
+                  {% endif %}
+                {% endif %}
 
                 <div class="p-6">
                   <span class="block text-white font-bold text-lg md:text-xl leading-tight mb-5">{{ post.title }}</span>
 
                   <div class="text-right">
-                    <a href="#" class="bg-secondary text-white inline-block px-3 py-1 rounded hover:bg-secondary-dark focus:bg-secondary-dark">Button Title</a>
+                    <a href="{{ post.link }}" class="bg-secondary text-white inline-block px-3 py-1 rounded hover:bg-secondary-dark focus:bg-secondary-dark">Read More</a>
                   </div>
                 </div>
               </div>
@@ -35,7 +45,8 @@
 
           <ul>
             {% for cat in categories %}
-              <li><a href="{{ cat.url }}" class="w-full block py-1 text-primary hover:text-secondary focus:text-secondary">{{ cat.title }}</a></li>
+              {# @INTEGRATION - check your permalinks to confirm this URL path is correct #}
+              <li><a href="/category/{{ cat.slug }}/" class="w-full block py-1 text-primary hover:text-secondary focus:text-secondary">{{ cat.name }}</a></li>
             {% endfor %}
           </ul>
         </div>
@@ -44,9 +55,19 @@
           <span class="uppercase tracking-wider text-secondary block mb-4">Follow Us</span>
 
           <ul>
-            <li><a href="#" class="w-full block py-1 text-primary hover:text-secondary focus:text-secondary">Facebook</a></li>
-            <li><a href="#" class="w-full block py-1 text-primary hover:text-secondary focus:text-secondary">Twitter</a></li>
-            <li><a href="#" class="w-full block py-1 text-primary hover:text-secondary focus:text-secondary">Instagram</a></li>
+          {% if options.social_facebook %}
+            <li><a href="{{ options.social_facebook }}" target="_blank" rel="noopener noreferrer" class="w-full block py-1 text-primary hover:text-secondary focus:text-secondary">Facebook</a></li>
+          {% endif %}
+          {% if options.social_twitter %}
+            <li><a href="{{ options.social_twitter }}" target="_blank" rel="noopener noreferrer" class="w-full block py-1 text-primary hover:text-secondary focus:text-secondary">Twitter</a></li>
+          {% endif %}
+          {% if options.social_instagram %}
+            <li><a href="{{ options.social_instagram }}" target="_blank" rel="noopener noreferrer" class="w-full block py-1 text-primary hover:text-secondary focus:text-secondary">Instagram</a></li>
+          {% endif %}
+
+          {% for item in options.social_other %}
+            <li><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="w-full block py-1 text-primary hover:text-secondary focus:text-secondary">{{ item.name }}</a></li>
+          {% endfor %}
           </ul>
         </div>
       </div>
