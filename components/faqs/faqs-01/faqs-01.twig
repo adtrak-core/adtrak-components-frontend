@@ -1,0 +1,15 @@
+{# FAQs - Variant 1 #}
+<div class="bg-gray-100 p-8">
+  {% for faq in faqs %}
+    <details class="bg-white rounded-lg shadow-lg mb-4">
+      <summary class="font-bold text-secondary text-left block w-full py-4 px-5 md:px-8 xl:px-12 hover:text-secondary-dark focus:text-secondary-dark">
+          {{ faq.faq_question }}
+      </summary>
+      <div class="max-w-2xl px-5 md:px-8 xl:px-12 pb-4 pt-3">
+        <p class="text-primary text-sm md:text-base">
+          {{ faq.faq_answer }}
+        </p>
+      </div>
+    </details>
+  {% endfor %}
+</div>

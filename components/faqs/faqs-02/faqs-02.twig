@@ -1,0 +1,15 @@
+{# FAQs - Variant 2 #}
+<div class="bg-white p-8">
+  {% for faq in faqs %}
+    <details class="{{ loop.index != loop.length ? ' border-b border-gray-200': ' ' }}">
+      <summary class="text-primary text-left block w-full py-4 hover:text-secondary focus:text-secondary">
+        {{ faq.faq_question }}
+      </summary>
+      <div class="max-w-2xl pt-4">
+        <p id="faq-{{ loop.index }}" class="text-primary text-sm md:text-base opacity-50 pb-5">
+          {{ faq.faq_answer }}
+        </p>
+      </div>
+    </details>
+  {% endfor %}
+</div>
