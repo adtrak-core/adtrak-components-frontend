@@ -2,6 +2,7 @@
 <div class="bg-primary py-8 md:py-12 lg:py-16">
   <div class="container">
     <div class="w-full max-w-xl mx-auto text-center mb-8 md:mb-16">
+      {# @INTEGRATION - This can be manually updated or use {{ post.content }} to pull WordPress content in #}
       <span class="block mb-2 font-bold text-white text-2xl lg:text-3xl">Areas We Cover</span>
       <p class="text-white opacity-50 text-base md:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non tempor nisi. In eu ante sit amet felis.</p>
     </div>
@@ -18,7 +19,14 @@
         ">
           <div class="px-6 py-2 md:px-8 md:py-4 lg:py-6">
             <span class="text-secondary text-sm block uppercase tracking-wider">{{ location.title }}</span>
-            <a href="tel:{{ location.number }}" class="text-white hover:text-secondary focus:text-secondary block font-bold text-lg md:text-xl">{{ location.number }}</a>
+
+            {% if fractal %}
+              <a href="tel:{{ location.number }}" class="text-white hover:text-secondary focus:text-secondary block font-bold text-lg md:text-xl">{{ location.number }}</a>
+            {% else %}
+              <span class="text-white block font-bold text-lg md:text-xl">
+                {% do action("ld_single", location.slug, false) %}
+              </span>
+            {% endif %}
           </div>
         </div>
       {% endfor %}

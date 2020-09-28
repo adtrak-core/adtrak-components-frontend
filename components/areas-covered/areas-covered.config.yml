@@ -1,7 +1,8 @@
 title: Areas Covered
-status: wip
+status: ready
 
 context:
+  fractal: true
   locations:
     -
       title: Nottingham
