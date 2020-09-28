@@ -1,0 +1,50 @@
+{# Meet The Team - Variant 4 #}
+<div class="bg-gray-100 py-8">
+  <div class="container">
+    <div class="flex flex-wrap md:-mx-5">
+      {% for person in teamMembers %}
+        <div class="w-full md:w-1/2 lg:w-1/4 md:px-5 mb-8 lg:mb-0">
+          <div class="w-full bg-white shadow-md">
+            <div class="flex flex-wrap">
+              {% if fractal %}
+                {% if person.team_member_image %}
+                  <img class="block w-full" src="{{ person.team_member_image.src }}" alt="{{ person.title }}" />
+                {% endif %}
+              {% else %}
+                {% if person.meta('team_member_image') %}
+                  <img data-src="{{ person.meta('team_member_image').url|resize(600, 350) }}" alt="{{ person.title }}" class="block w-full lazyload" />
+                {% endif %}
+              {% endif %}
+
+              <div class="p-6 border-b border-gray-200 w-full">
+                {% if person.title %}
+                  <div class="w-full">
+                    <span class="block text-xl md:text-2xl text-primary">{{ person.title }}</span>
+                  </div>
+                {% endif %}
+
+                {% if person.team_member_job_title %}
+                  <div class="w-full">
+                    <span class="block uppercase text-sm tracking-wider text-primary-light">{{ person.team_member_job_title }}</span>
+                  </div>
+                {% endif %}
+              </div>
+
+              {% if person.team_member_short_description %}
+                <div class="w-full p-6">
+                  <p class="block text-sm text-primary">{{ person.team_member_short_description }}</p>
+                </div>
+              {% endif %}
+
+              {% if person.team_member_telephone %}
+                <div class="bg-primary text-white w-full py-2 px-6">
+                  <a href="tel: {{ person.team_member_telephone }}" class="no-underline ml-auto inline-block text-white font-bold hover:text-secondary focus:text-secondary">{{ person.team_member_telephone }}</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

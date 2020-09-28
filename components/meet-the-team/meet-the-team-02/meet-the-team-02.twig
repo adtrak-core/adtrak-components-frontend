@@ -1,0 +1,36 @@
+{# Meet The Team - Variant 2 #}
+<div class="bg-gray-100 py-8">
+  <div class="container">
+    <div class="flex flex-wrap md:-mx-5">
+      {% for person in teamMembers %}
+        <div class="w-full md:w-1/2 lg:w-1/4 md:px-5 mb-8 lg:mb-0{{ person.team_member_image ?? person.meta('team_member_image') ? ' pt-16' : '' }}">
+          <div class="bg-secondary w-full rounded-md">
+            <div class="flex flex-wrap justify-center">
+              {% if fractal %}
+                {% if person.team_member_image %}
+                  <img class="block w-32 h-32 mb-4 rounded-full border-4 border-secondary -mt-16" src="{{ person.team_member_image.src }}" alt="{{ person.title }}" />
+                {% endif %}
+              {% else %}
+                {% if person.meta('team_member_image') %}
+                  <img data-src="{{ person.meta('team_member_image').url|resize(600) }}" alt="{{ person.title }}" class="block w-32 h-32 mb-4 rounded-full border-4 border-secondary -mt-16 lazyload" />
+                {% endif %}
+              {% endif %}
+
+              {% if person.title %}
+                <div class="w-full">
+                  <span class="block text-xl md:text-2xl text-center text-white">{{ person.title }}</span>
+                </div>
+              {% endif %}
+
+              {% if person.team_member_job_title %}
+                <div class="w-full">
+                  <span class="block uppercase text-sm md:text-base tracking-wider text-center text-secondary-light mb-8 px-4">{{ person.team_member_job_title }}</span>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
