@@ -4,6 +4,12 @@ title: Prerequisites
 
 ## WordPress Plugins
 
+### Wordpress
+
+The Timber plugin needs to be installed for any of these components to work.
+
+### Plugins
+
 Usage of these components relies on the following WordPress plugins being installed:
 
 - ACF Pro
