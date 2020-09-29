@@ -43,3 +43,16 @@ screens: {
 
 ### Tailwind Typography
 Various components use the `prose` class from the official Typography plugin - installation instrucation be found here [https://tailwindcss.com/docs/typography-plugin](https://tailwindcss.com/docs/typography-plugin)
+
+## Tailwind Variants
+
+### Group hover
+Various components use the "group-hover" classes which need enabling by default, simply add the following to your Tailwind config file:
+
+```
+variants: {
+  backgroundColor: ['responsive', 'group-hover', 'hover', 'focus', 'group-focus'],
+  textColor: ['responsive', 'group-hover', 'hover', 'focus', 'group-focus'],
+  padding: ['responsive', 'group-hover', 'hover', 'focus', 'group-focus'],
+}
+```
