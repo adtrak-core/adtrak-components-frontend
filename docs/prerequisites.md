@@ -2,7 +2,15 @@
 title: Prerequisites
 ---
 
-Usage of these components relies on a set of prerequisites within your project.
+## WordPress Plugins
+
+Usage of these components relies on the following WordPress plugins being installed:
+
+- ACF Pro
+- Adtrak Location Dynamics
+- Contact Form 7 (if you want copy & paste form integration)
+
+Usage of these components relies on a set of prerequisites within your tailwind project:
 
 ## Tailwind Config
 
