@@ -1,2 +1,43 @@
 title: Content Area
 status: ready
+
+context:
+  fractal: true
+  post:
+    title: Welcome to Location Services
+    content: >-
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue odio urna, eu pulvinar elit fermentum et. Sed convallis fringilla velit. Integer at orci at eros ullamcorper lacinia ac.</p>
+
+      <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Sed nec dolor quis arcu suscipit tincidunt</li>
+        <li>Fusce mi ipsum, placerat ac eros at</li>
+      </ul>
+      
+      <p>Sed nec dolor quis arcu suscipit tincidunt. Nullam consectetur justo quis volutpat fringilla. Phasellus at lobortis metus, ac pulvinar ligula. Fusce mi ipsum, placerat ac eros at, fermentum facilisis nulla. Etiam quis dui ex.</p>
+
+      <p>Aenean ac sem a ligula aliquam fermentum. Maecenas at felis eu tortor sodales ultricies. Praesent a pulvinar purus. Nam tincidunt facilisis lobortis.</p>
+  options:
+    content_usps:
+      -
+        icon: star
+        text: Something that is really nice 
+        link: '#'
+      -
+        icon: star
+        text: Something that is really nice 
+        link: '#'
+    content_image_gallery:
+      -
+        src: https://placedog.net/650/850
+        title: Dog
+      -
+        src: https://placedog.net/650/850
+        title: Dog
+    content_why_choose_us:
+      -
+        text: Something
+      -
+        text: Something Else
+      -
+        text: One More Thing

@@ -9,5 +9,14 @@ body {
   max-width: theme("screens.2xl");
 }
 
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
 @tailwind components;
 @tailwind utilities;
