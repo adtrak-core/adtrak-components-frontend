@@ -2,15 +2,6 @@
 const projectControls = document.querySelectorAll('.project-control');
 const projectPanes = document.querySelectorAll('.project-pane');
 
-// Set first pane to show by default
-projectPanes.forEach(element => {
-    element.classList.add('hidden');
-})
-projectPanes[0].classList.remove('hidden');
-
-const projectControlsActiveClasses = ['bg-gray-100'];
-projectControls[0].classList.add(...projectControlsActiveClasses);
-
 function switchProject(event) {
     event.preventDefault();
     // Find target pane
@@ -31,6 +22,17 @@ function switchProject(event) {
     document.getElementById(targetPane).classList.remove('hidden');
 }
 
+// Set first pane to show by default
+if (Object.keys(projectPanes).length > 0) {
+    projectPanes.forEach(element => {
+        element.classList.add('hidden');
+    })
+    projectPanes[0].classList.remove('hidden');
+
+    const projectControlsActiveClasses = ['bg-gray-100'];
+    projectControls[0].classList.add(...projectControlsActiveClasses);
+}
+
 // Only apply the event listener if we have buttons
 if (Object.keys(projectControls).length > 0) {
     projectControls.forEach(element => {
@@ -40,15 +42,13 @@ if (Object.keys(projectControls).length > 0) {
 
 // Control gallery thumbnails
 const galleryThumbs = document.querySelectorAll('.project-gallery-thumb');
+// const galleryFeature = document.querySelector('.project-gallery-feature');
 
 function switchProjectImage(event) {
-    // Get the new image src
     let featureSrc = event.target.dataset.feature;
-
-    // Find the target featured image
     let projectFeature = event.target.dataset.projectFeature;
+    console.log(projectFeature);
 
-    // Replace the target src with the new src
     document.querySelector('.' + projectFeature).src = featureSrc;
 }
 
