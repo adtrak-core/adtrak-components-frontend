@@ -9,10 +9,11 @@
               <span class="block font-bold text-xl md:text-2xl text-primary border-b border-gray-200 pb-4 mb-5 leading-tight w-full">{{ vacancy.title }}</span>
             
               <div class="prose prose-sm max-w-none text-primary mb-8 w-full">
-                {{ vacancy.description }}
+                {{ vacancy.content }}
               </div>
-
-              <a href="#" class="bg-secondary rounded text-white px-4 py-2 ml-auto">Apply Now</a>
+              
+              {# @INTEGRATION - Check your contact link path below #}
+              <a href="/contact" class="bg-secondary rounded text-white px-4 py-2 ml-auto">Apply Now</a>
             </div>
           </div>
         </div>

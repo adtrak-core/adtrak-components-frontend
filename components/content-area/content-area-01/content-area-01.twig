@@ -1,0 +1,35 @@
+{# Content Area - Variant 1 #}
+<div class="bg-gray-100 overflow-hidden">
+  <div class="container py-6 md:py-10">
+    <div class="flex flex-wrap md:-mx-8">
+      <div class="w-full md:w-7/12 md:px-8 mb-8 md:mb-0">
+        <div class="prose-sm md:prose text-primary max-w-none md:max-w-none">
+          <h1>{{ post.title }}</h1>
+          
+          {{ post.content }}
+        </div>
+      </div> 
+
+      <div class="w-full md:w-5/12 md:px-8">
+        <div class="flex flex-wrap md:-mx-3">
+          {% if not fractal and post.meta('content_usps') | length %}
+            {% set usps = post.meta('content_usps') %}
+          {% elseif options.content_usps | length %}
+            {% set usps = options.content_usps %}
+          {% endif %}
+
+          {% for usp in usps %}
+            <div class="w-full lg:w-1/2 md:px-3 mb-5">
+              <a href="{{ usp.link }}" class="rounded-md bg-white h-full block p-8 uppercase tracking-wider text-center hover:text-secondary focus:text-secondary">
+                <span class="flex items-center justify-center w-20 h-20 mx-auto mb-6 bg-secondary rounded-full text-white">
+                  {% if fractal %}<svg class="icon"><use href="#icon-{{ usp.icon }}"></use></svg>{% else %}{{function ('icon', usp.icon)}}{% endif %}
+                </span>
+                {{ usp.text }}
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

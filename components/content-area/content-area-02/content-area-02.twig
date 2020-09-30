@@ -1,0 +1,35 @@
+{# Content Area - Variant 2 #}
+<div class="bg-white overflow-hidden">
+  <div class="container py-6 md:py-10">
+    <div class="flex flex-wrap md:-mx-6 lg:-mx-8">
+      <div class="w-full md:w-5/12 lg:w-6/12 md:px-6 lg:px-8 order-2 md:order-1">
+        <div class="flex flex-wrap sm:-mx-5">
+          {% if not fractal and post.meta('content_image_gallery') | length %}
+            {% set gallery = post.meta('content_image_gallery') %}
+          {% elseif options.content_image_gallery | length %}
+            {% set gallery = options.content_image_gallery %}
+          {% endif %}
+
+          {% for img in gallery %}
+            <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 sm:px-5 mb-6 sm:mb-0 md:mb-5 lg:mb-0">
+              {% if fractal %}
+                <img src="{{ img.src }}" src="{{ img.title }}" class="w-full" />
+              {% else %}
+                <img src="{{ img.url | resize(450, 550, "center" )}}" src="{{ img.title }}" class="w-full" />
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="w-full md:w-7/12 lg:w-6/12 md:px-6 lg:px-8 mb-8 md:mb-0 order-1 md:order-2">
+        <div class="prose-sm md:prose text-primary max-w-none md:max-w-none">
+          <span class="block text-secondary uppercase text-sm tracking-wider">welcome to</span>
+          <h1>{{ post.title }}</h1>
+          
+          {{ post.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

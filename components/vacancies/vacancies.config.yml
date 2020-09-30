@@ -1,11 +1,11 @@
 title: Vacancies
-status: wip
+status: ready
 
 context:
   vacancies:
     -
       title: Job Title
-      description: >-
+      content: >-
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel diam erat. Nulla volutpat elementum velit at suscipit.</p>
 
         <p>Aenean tristique sed sem quis elementum. Vestibulum convallis dolor id diam vehicula, a ultricies dui accumsan. Donec ut metus iaculis, mollis ex ac, sodales.</p>
@@ -23,7 +23,7 @@ context:
     -
       title: Job Title
       active: true
-      description: >-
+      content: >-
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel diam erat. Nulla volutpat elementum velit at suscipit.</p>
 
         <p>Aenean tristique sed sem quis elementum. Vestibulum convallis dolor id diam vehicula, a ultricies dui accumsan. Donec ut metus iaculis, mollis ex ac, sodales.</p>
@@ -40,7 +40,7 @@ context:
         <p>Morbi in condimentum massa, vitae efficitur massa. Cras vestibulum eu leo eget pharetra. In hac habitasse platea dictumst. Ut et nulla tincidunt, hendrerit ex sed.</p>
     -
       title: Job Title
-      description: >-
+      content: >-
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel diam erat. Nulla volutpat elementum velit at suscipit.</p>
 
         <p>Aenean tristique sed sem quis elementum. Vestibulum convallis dolor id diam vehicula, a ultricies dui accumsan. Donec ut metus iaculis, mollis ex ac, sodales.</p>
@@ -57,7 +57,7 @@ context:
         <p>Morbi in condimentum massa, vitae efficitur massa. Cras vestibulum eu leo eget pharetra. In hac habitasse platea dictumst. Ut et nulla tincidunt, hendrerit ex sed.</p>
     -
       title: Job Title
-      description: >-
+      content: >-
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel diam erat. Nulla volutpat elementum velit at suscipit.</p>
 
         <p>Aenean tristique sed sem quis elementum. Vestibulum convallis dolor id diam vehicula, a ultricies dui accumsan. Donec ut metus iaculis, mollis ex ac, sodales.</p>

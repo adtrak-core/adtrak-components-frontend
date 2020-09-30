@@ -1,0 +1,23 @@
+{# Vacancies - Variant 3 #}
+<div class="bg-primary py-6">
+  <div class="container">
+    <div class="bg-white shadow-md rounded-md">
+      {% for vacancy in vacancies %}
+        <details class="{{ loop.index != loop.length ? ' border-b border-gray-200' : ' ' }}">
+          <summary class="text-left block font-bold text-xl md:text-2xl leading-tight w-full text-primary py-6 md:py-8 px-8 md:px-10">{{ vacancy.title }}</summary>
+
+            <div class="pb-8 md:pb-10 px-8 md:px-10">
+              <div class="prose prose-sm max-w-none text-primary w-full pb-8">
+                {{ vacancy.content }}
+              </div>
+
+              <div class="text-center">
+                {# @INTEGRATION - Check your contact link path below #}
+                <a href="/contact" class="bg-secondary rounded text-white px-4 py-2 ml-auto">Apply Now</a>
+              </div>
+            </div>
+        </details>
+      {% endfor %}
+    </div>
+  </div>
+</div>
