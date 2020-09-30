@@ -39,7 +39,7 @@
                 <div>
                   {% for item in range(1, review.rating) %}
                     {% if fractal %}
-                      <svg class="icon"><use href="#icon-star"></use></svg>
+                      <svg class="icon text-secondary"><use href="#icon-star"></use></svg>
                     {% else %}
                       {{function ('icon', 'star', 'text-secondary')}}
                     {% endif %}
