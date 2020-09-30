@@ -8,7 +8,7 @@ When integrating the reviews component into the Adtrak WordPress boilerplate, us
 
 ```
 $reviews =  new ReviewsIO();
-$reviews->setStoreID(‘auto-exhaust-tyres’);
+$reviews->setStoreID('auto-exhaust-tyres');
 $context['reviews'] = json_decode($reviews->getReviews());
 ```
 
