@@ -2,6 +2,7 @@ title: Heros
 status: ready
 
 context:
+  fractal: true
   subHeading: Service in <strong>location</strong>
   heading: Lorem ipsum dolor sit amet, adipicising etim consectetur.
   blurb: >- 
@@ -20,6 +21,6 @@ context:
       text: Aenean eu nisi ut nulla <strong>fringilla varius</strong>
     - 
       text: Ipsum dolor <strong>eu nisi</strong> ut nulla fringilla varius
-  image: 
+  image:
     url: http://placekitten.com/500/500
     title: Kitten
