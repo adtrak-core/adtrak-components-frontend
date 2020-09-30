@@ -8,7 +8,7 @@ When integrating the hero component into the Adtrak WordPress boilerplate, impor
   heading: post.meta('hero_heading') | default(post.title),
   blurb: post.meta('hero_blurb') | default(false),
   usps: post.meta('hero_usps') | default(false),
-  image: post.meta('hero_image') | default(false),
+  image: post.thumbnail | default(false),
   btns: post.meta('hero_buttons') | default(false)
 } only %}
 ```
