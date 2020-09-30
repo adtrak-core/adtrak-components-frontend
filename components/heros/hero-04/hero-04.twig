@@ -31,11 +31,16 @@
         {% endif %}
       </div>
 
-      {# Image Block ... @TODO implement this properly #}
       {% if image %}
-      <div class="order-1 md:order-2 md:absolute top-0 right-0 bottom-0 w-full md:w-1/2">
-        <img src="{{ image.url }}" alt="{{ image.title }}" class="w-full h-full object-center object-cover" />
-      </div>
+        {% if fractal %}
+          <div class="order-1 md:order-2 md:absolute top-0 right-0 bottom-0 w-full md:w-1/2">
+            <img src="{{ image.url }}" alt="{{ image.title }}" class="w-full h-full object-center object-cover" />
+          </div>
+        {% else %}
+          <div class="order-1 md:order-2 md:absolute top-0 right-0 bottom-0 w-full md:w-1/2">
+            <img src="{{ image.url |resize(1200,900, 'center') }}" alt="{{ image.title }}" class="w-full h-full object-center object-cover" />
+          </div>
+        {% endif %}
       {% endif %}
     </div>
   </div>
