@@ -1,3 +1,4 @@
+{# Reviews - Variant 2 #}
 
 {% if reviews %}
 
@@ -31,7 +32,7 @@
         <div class="flex justify-center w-full md:w-3/4 lg:w-4/5 ml-auto px-4 lg:px-6 relative">
           <ul class="flex w-full overflow-x-auto scrolling-touch md:-mx-5 2xl:-mx-8 carousel-container">
             {% for review in reviews.reviews %}
-              <li class="w-full sm:w-1/2 lg:w-1/3 flex-none mb-4 px-5 carousel-item">
+              <li class="w-full sm:w-1/2 lg:w-1/3 flex-none px-5 carousel-item">
                 <div class="bg-white text-primary p-5 rounded-lg">
                   <div class="mb-3">
                     <p class="trim text-primary">{{ review.comments|slice(0, 200) ~ '...' }}</p>
