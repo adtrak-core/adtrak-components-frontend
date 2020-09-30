@@ -44,9 +44,6 @@ module.exports = {
     textColor: ['responsive', 'group-hover', 'hover', 'focus', 'group-focus'],
     padding: ['responsive', 'group-hover', 'hover', 'focus', 'group-focus'],
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
   corePlugins: {
 		container: false,
 	},
