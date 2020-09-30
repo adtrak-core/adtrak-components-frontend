@@ -1,0 +1,51 @@
+{# Gallery - Variant 1 #}
+
+{% if post.gallery_carousel | length %}
+    {% set gallery = post.meta('gallery_carousel') %}
+{% elseif options.gallery_carousel | length %}
+    {% set gallery = options.gallery_carousel %}
+{% endif %}
+
+<div class="bg-primary py-8">
+  <div class="container">
+    <div class="w-full relative">
+
+      <div class="w-full mx-auto px-4 lg:px-6 relative">
+        <div class="flex w-full overflow-x-auto scrolling-touch carousel-container">
+          {% for item in gallery %}
+            <div class="w-full xs:w-1/2 md:w-1/3 lg:w-1/5 px-4 flex-none carousel-item">
+              <div class="w-full">
+                {% if fractal %}
+                  <img class="block w-full border-8 border-white" src="{{ item.url }}" alt="{{ item.title }}" />
+                {% else %}
+                  <img class="block w-full border-8 border-white lazyload" data-src="{{ item.url|resize(500,400) }}" alt="{{ item.title }}" />
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="absolute top-0 left-0 h-full flex items-center">
+          <button class="carousel-arrow carousel-arrow-left px-0 py-2 opacity-25">
+            {% if fractal %}
+              <svg class="icon text-2xl xl:text-3xl block text-white"><use href="#icon-angle-left"></use></svg>
+            {% else %}
+              {{function ('icon', 'angle-left', 'text-2xl xl:text-3xl block text-white')}}
+            {% endif %}
+          </button>
+        </div>
+        
+        <div class="absolute top-0 right-0 h-full flex items-center">
+          <button class="carousel-arrow carousel-arrow-right px-0 py-2">
+            {% if fractal %}
+              <svg class="icon text-2xl xl:text-3xl block text-white"><use href="#icon-angle-right"></use></svg>
+            {% else %}
+              {{function ('icon', 'angle-right', 'text-2xl xl:text-3xl block text-white')}}
+            {% endif %}
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+{# Gallery - Variant 2 #}
+
+{% if post.thumbnail_gallery | length %}
+    {% set gallery = post.meta('thumbnail_gallery') %}
+{% elseif options.thumbnail_gallery | length %}
+    {% set gallery = options.thumbnail_gallery %}
+{% endif %}
+
+
+<div class="bg-gray-200 py-8 thumbnail-gallery">
+  <div class="container">
+
+    {% for item in gallery %}
+      {% if loop.first %}
+        <div class="w-full mb-4 md:mb-6 thumbnail-gallery-active">
+          {% if fractal %}
+            <img class="block w-full border-4 border-white" src="{{ item.url }}" alt="{{ item.title }}" />
+          {% else %}
+            <img class="block w-full border-4 border-white lazyload" data-src="{{ item.url|resize(1024,768) }}" alt="{{ item.title }}" />
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    <div class="flex flex-wrap -mx-2 md:-mx-4 thumbnail-gallery-thumbs">
+      {% for item in gallery %}
+        <div class="w-1/2 md:flex-1 px-2 md:px-4 mb-4 lg:mb-0">
+          <div class="w-full">
+            {% if fractal %}
+              <img class="block w-full border-4 border-white cursor-pointer hover:opacity-75 transition" src="{{ item.url }}" alt="{{ item.title }}" />
+            {% else %}
+              <img class="block w-full border-4 border-white cursor-pointer hover:opacity-75 transition lazyload" data-src="{{ item.url|resize(500,400) }}" alt="{{ item.title }}" data-full-size={{ item.url|resize(1024,768) }} />
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
