@@ -2,6 +2,10 @@ Title: Headers
 status: ready
 
 context:
+  fractal: true
+  options:
+    site_logo:
+      url: '#'
   topNavUsps:
     - Lorem <strong>ipsum dolor</strong> sit amet
     - <strong>Aenean eu nisi</strong> ut nulla fringilla varius
