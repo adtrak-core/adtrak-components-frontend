@@ -20,8 +20,20 @@ $context['reviews'] = json_decode($reviews->getReviews());
 
 7. Copy the JS code from `simple-carousel.js` in the `assets` tab into this new file
 
-8. Create a new twig file for your Reviews carousel component: `_components/reviewsio.twig`
+8. Add the following CSS to the bottom of your `_resources/styles/main.scss` file
 
-9. Copy the code from the View tab into this new file
+```
+.carousel-container {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.carousel-container::-webkit-scrollbar { /* WebKit */
+  display: none;
+}
+```
 
-10. Include it wherever you want on your site: `{% include "_components/reviewsio.twig" %}`
+9. Create a new twig file for your Reviews carousel component: `_components/reviewsio.twig`
+
+10. Copy the code from the View tab into this new file
+
+11. Include it wherever you want on your site: `{% include "_components/reviewsio.twig" %}`
