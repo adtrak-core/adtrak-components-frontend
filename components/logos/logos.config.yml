@@ -2,6 +2,7 @@ title: Logos
 status: ready
 
 context:
+  fractal: true
   header: Proud to have worked with...
   logos:
     -
