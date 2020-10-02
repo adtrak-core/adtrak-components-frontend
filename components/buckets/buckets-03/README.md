@@ -23,7 +23,7 @@ Use the following guide to add the *Buckets* module to your website:
 
 - Open the `_views/front-page.twig` file in your theme
 
-- Copy the below include within the `{% block content %}` block
+- Paste the below include within the `{% block content %}` block
 
 ```
 {% include '_components/buckets.twig' with {
