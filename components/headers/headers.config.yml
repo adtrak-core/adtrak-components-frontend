@@ -39,6 +39,19 @@ context:
         name: Service Two
         link: '#'
         class: 'wp-classes'
+        children:
+          -
+            name: Service Dropdown One
+            link: '#'
+            class: 'wp-classes'
+          -
+            name: Service Dropdown Two
+            link: '#'
+            class: 'wp-classes'
+          -
+            name: Service Dropdown Three
+            link: '#'
+            class: 'wp-classes'
       -
         name: Service Three
         link: '#'
@@ -51,4 +64,17 @@ context:
         name: Service Five
         link: '#'
         class: 'wp-classes'
+        children:
+          -
+            name: Service Dropdown One
+            link: '#'
+            class: 'wp-classes'
+          -
+            name: Service Dropdown Two
+            link: '#'
+            class: 'wp-classes'
+          -
+            name: Service Dropdown Three
+            link: '#'
+            class: 'wp-classes'
       
