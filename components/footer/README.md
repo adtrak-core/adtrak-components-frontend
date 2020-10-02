@@ -1,3 +1,17 @@
 ## WordPress Integration
 
-When integrating the footer component into the Adtrak WordPress, ensure you have a "Primary" and "Secondary" menu created in the backend. Also ensure you have your "company info" created in Site Options. Copy and paste the Fractal code into `footer.twig` and do a file search for `"@INTEGRATION"` and follow the instructions.
+Use the following guide to add the *Footer* module to your website:
+
+- Ensure you have  "Primary Menu" set up in Appearance > Menus.
+- - Make sure "Primary Menu" is linked to "Primary Menu Location" in the checkboxes of this page
+
+- Ensure you have  "Secondary Menu" set up in Appearance > Menus.
+- - Make sure "Secondary Menu" is linked to "Secondary Menu Location" in the checkboxes of this page
+
+- Ensure you have input your Company Information into the 'Site Options' page
+
+- From the View tab in Fractal, copy the code for the Footer you'd like to us
+
+- Paste the code into `footer.twig`
+
+- Search for and follow the `@INTEGRATION` steps within this file.
