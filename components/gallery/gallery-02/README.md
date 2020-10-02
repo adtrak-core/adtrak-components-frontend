@@ -1,17 +1,29 @@
 ## WordPress Integration
 
-When integrating the gallery component into the Adtrak WordPress boilerplate, use the following steps:
+Use the following guide to add the *Gallery* module to your website:
 
-1. Import the `acf.json` code from the assets tab to create the Thumbnail Gallery custom field - this will be available on each page with a fallback in the “site options” section
+- Go to the Assets tab
 
-2. Add some images to the Thumbnail Gallery in Site Options
+- Download the `acf.json` file from the assets tab 
 
-3. Create a new file in your `js` folder: `_resources/js/thumbnail-gallery.js`
+- Go to the Wordpress Admin panel
 
-4. Copy the JS code from `thumbnail-gallery.js` in the `assets` tab into this new file
+- Got to Custom Fields > Tools and import your acf file
+- - This will create a Gallery Carousel field on each "page" of your website with a fallback in the "Site Options" page
 
-5. Create a new twig file for your Thumbnail Gallery component: `_components/thumbnail-gallery.twig`
+- Go to Site Options and add images to the Gallery Carousel
 
-6. Copy the code from the View tab into this new file
+- In your theme, create a new file in your `_resources/js` folder called `thumbnail-gallery.js`
 
-7. Include it wherever you want on your site: `{% include "_components/thumbnail-gallery.twig" %}`
+- In Fractal, copy the JS code from `thumbnail-gallery.js` in the `assets` tab 
+
+- Paste this code into the `thumbnail-gallery.js` file in your theme
+
+- Create a new twig file for your Gallery Carousel component: `_components/thumbnail-gallery.twig`
+
+- In Fractal, copy the code from the View tab into this new file
+
+- Include the Gallery Carousel component within your twig page templates using:
+```
+{% include "_components/thumbnail-gallery.twig" %}
+```
