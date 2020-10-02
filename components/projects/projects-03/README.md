@@ -1,12 +1,18 @@
 ## WordPress Integration
 
-When integrating the projects component into the Adtrak WordPress boilerplate, use the following steps to add Projects:
+Use the following guide to add the *Projects* module to your website:
 
-1. Copy the PHP code from `cpt-projects.php` into `_functions/cpt.php` to create a new 'Project' custom post type
-2. Copy the JS code from `projects.js` on the `assets` panel into `_resources/js` to add the required JS
-3. In wp-admin go to Custom Fields -> Tools and import `acf-projects.json`
-4. Create your projects in wp-admin
-5. In your php file (`page.php`, `front-page.php` etc) paste the below code to add Projects into context
+- Create a new file in your `_resources/js` folder: `_resources/js/projects.js`
+
+- Copy the JS code from `projects.js` in the `assets` tab into this new file
+
+- Copy the PHP code from `cpt-projects.php` in the `assets` tab into `_functions/cpt.php` to create a new 'Project' custom post type
+
+- In wp-admin go to Custom Fields -> Tools and import `acf-projects.json`
+
+- Go to the new "Projects" pane in WP admin and add some projects
+
+- In your php file (`page.php`, `front-page.php` etc) paste the below code to add Projects into context
 
 ```
 $projects = [
@@ -17,8 +23,9 @@ $projects = [
 $context['projects'] = new Timber\PostQuery($projects);
 ```
 
-6. Create a new file called `projects.twig` in `_views/_components/` and copy the code from Fractal into your new file
-7. Use the code below to include your projects in the page
+- Create a new file called `projects.twig` in `_views/_components/` and copy the code from Fractal into your new file
+
+- Use the code below in your template file (eg: `page.twig`, `front-page.twig` etc) to include your projects in the page
 
 ```
 {% include "_components/projects.twig" with {
@@ -26,4 +33,4 @@ $context['projects'] = new Timber\PostQuery($projects);
 } only %}
 ```
 
-8. Test your page
+- Test your page
