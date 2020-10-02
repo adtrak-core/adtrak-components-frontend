@@ -1,12 +1,22 @@
 ## WordPress Integration
 
-When integrating the logos component into the Adtrak WordPress boilerplate, use the following include to pass WP data into the component:
+Use the following guide to add the *Downloads* module to your website:
 
-1. Create a new file in your `js` folder: `_resources/js/simple-carousel.js`
+- Create a new file in your `_resources/js` folder: `_resources/js/simple-carousel.js`
 
-2. Copy the JS code from `simple-carousel.js` in the `assets` tab into this new file
+- Copy the JS code from `simple-carousel.js` in the `assets` tab into this new file
 
-3. Add the following CSS to the bottom of your `_resources/styles/main.scss` file
+- Go to the Wordpress Admin panel
+
+- Go to the site options page in your Wordpress Admin panel and add some "logos" items
+
+- In your theme, create a `_views/components/logos.twig` file
+
+- Go to Fractal and copy the code you would like from the View tab
+
+- Paste the code into `_views/components/logos.twig`
+
+-. Add the following CSS to the bottom of your `_resources/styles/main.scss` file
 
 ```
 .carousel-container {
@@ -18,6 +28,10 @@ When integrating the logos component into the Adtrak WordPress boilerplate, use 
 }
 ```
 
+- Open the `_views/page.twig` (or respective file you'd like the logos to appear in) file in your theme
+
+- Paste the below include with:
+
 ```
 {% include "_components/logos.twig"
   with {
@@ -26,5 +40,3 @@ When integrating the logos component into the Adtrak WordPress boilerplate, use 
   }
 %}
 ```
-
-This will use the default logo items from site options.
