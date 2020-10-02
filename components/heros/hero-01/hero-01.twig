@@ -37,7 +37,7 @@
       {% if fractal %}
         <img src="{{ image.url }}" alt="{{ image.title }}" class="w-full h-full object-center object-cover" />
       {% else %}
-        <img src="{{ image.url |resize(1200,900, 'center' )}}" alt="{{ image.title }}" class="w-full h-full object-center object-cover" />
+        <img src="{{ image.src |resize(1200,900, 'center' )}}" alt="{{ image.title }}" class="w-full h-full object-center object-cover" />
       {% endif %}
     </div>
   {% endif %}
