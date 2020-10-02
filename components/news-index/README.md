@@ -1,8 +1,13 @@
 ## WordPress Integration
 
-When integrating the news page component into the Adtrak WordPress boilerplate, use the following include to pass WP data into the component:
+Use the following guide to add the *News Index* module to your website:
 
-- Add some posts and categories to your backend
-- Simply copy and paste the fractal code into your `{% block content %}` on `index.twig`
+- Go to the Wordpress Admin Panel and make sure you have News posts and Categories
+
+- Go to Fractal and copy the code you would like from the View tab
+
+- Paste the code into the `{% block content %}` of `_views/index.twig` 
+
 - Double check your category permalinks are correct (search `@INTEGRATION` in the copied code)
-- The social links are pulled from the site options options page
+
+- The social links are pulled from the "Site Options" page
