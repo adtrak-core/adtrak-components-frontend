@@ -59,13 +59,25 @@
         <nav
           id="menu-primary" 
           role="navigation"
-          class="xl:ml-auto xl:pl-8 hidden md:block md:w-full xl:flex-1"
+          class="xl:ml-auto xl:pl-8 hidden lg:block lg:w-full xl:flex-1 menu-primary"
           aria-label="Main Site Navigation"
         >
           <ul class="flex flex-wrap items-center xl:justify-end menu-primary-js">
             {% for item in primaryMenu.items %}
               {# Here the inline ternary statement removes the padding left for the first item #}
-              <li><a class="block px-5 py-3 text-sm lg:text-base xl:text-lg text-primary hover:text-secondary focus:text-secondary {{ item.class }} {{ item.current ? ' text-secondary border-secondary' : ' text-white border-transparent' }}{{ loop.index == 1 ? ' pl-0' : '' }}" href="{{ item.link }}">{{ item.name }}</a></li>
+              <li>
+                <a class="block px-5 py-3 p-2 text-sm lg:text-base xl:text-lg text-primary hover:text-secondary focus:text-secondary {{ item.class }} {{ item.current ? ' text-secondary border-secondary' : ' text-white border-transparent' }}{{ loop.index == 1 ? ' pl-0' : '' }}" href="{{ item.link }}">{{ item.name }}</a>
+                
+                {% if item.children %}
+                  <ul class="sub-menu bg-primary w-64 max-w-xs shadow-lg">
+                    {% for child in item.children %}
+                      <li class="{{ loop.index != loop.length ? 'border-b border-primary-light' : '' }}">
+                        <a class="text-white text-center uppercase tracking-wider px-5 py-3 block hover:bg-primary-dark focus:bg-primary-dark hover:pl-6 focus:pl-6 transition-all duration-300 ease-in-out text-sm {{ child.class }}" href="{{ child.link }}">{{ child.name }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
             {% endfor %}
 
             {# @INTEGRATION - Add your contact link here #}
