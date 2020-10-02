@@ -1,17 +1,28 @@
 ## WordPress Integration
 
-When integrating the FAQs component into the Adtrak WordPress boilerplate, use the following include to pass WP data into the component:
+Use the following guide to add the *FAQs* module to your website:
 
-- Import the `acf.json` code from the assets tab to create the data model within the "site options" ACF options page
+- Go to the Assets tab
 
-- Add some content in the back end
+- Download the `acf.json` file from the assets tab 
 
-- Create `_components/faqs.twig`, then copy and paste the Fractal code in
+- Go to the Wordpress Admin panel
 
-- Reference the include on your page template as so, passing in the context we created earlier (the `options` variable is setup to be a global variable by default):
+- Got to Custom Fields > Tools and import your acf file
+- - This will create the FAQs field group in your 'Site Options' page
+
+- Add content to the FAQs in your site options
+
+- From the Views tab in Fractal, copy the code for the variant you wish to use
+
+- In your theme, create `_components/faqs.twig` and paste in the Fractal code
+
+- On your page, include your new FAQs module using the include below:
 
 ```
 {% include "_components/faqs.twig" with {
   faqs: options.faqs
 } only %}
 ```
+
+*Note that the `options` variable is global by default*
