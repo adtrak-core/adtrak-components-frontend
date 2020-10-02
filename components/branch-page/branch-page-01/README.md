@@ -1,14 +1,24 @@
 ## WordPress Integration
 
-When integrating the Branch Page component into the Adtrak WordPress boilerplate, use the following include to pass WP data into the component:
+Use the following guide to add the *Branch Page* module to your website:
 
-- Grab the `cpt.php` code from the assets tab and drop it into your `_functions/cpt.php` file to create the "Branches" Post Type.
+- Go to the Assets tab
 
-- Import the `acf.json` code from the assets tab to create the data model on the custom post type
+- Copy the contents of `cpt.php` code and paste it into your `_functions/cpt.php` file to create the "Branches" Post Type
 
-- Add some Branches to the backend
+- Go to the Assets tab
 
-- Create a new php file in the root of your project called `single-branches.php` and paste the below code in, this will tell branch pages to render the `single-branches.twig` template:
+- Download the `acf.json` file from the assets tab 
+
+- Go to the Wordpress Admin panel
+
+- Got to Custom Fields > Tools and import your acf file
+
+- Go to Branches and add your branches
+
+- Create a new php file in the root of your theme called `single-branches.php` 
+
+- Paste the below code into `single-branches.php`, this will tell branch pages to render the `single-branches.twig` template:
 
 ```
 <?php 
@@ -35,4 +45,4 @@ if (is_single()) { ?>
 {% endblock %}
 ```
 
-- Copy and paste the Fractal code into the `{% block content %}` block
+- Copy and paste the Fractal from the Views tab into the `{% block content %}` block

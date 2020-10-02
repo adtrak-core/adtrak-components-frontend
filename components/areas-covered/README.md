@@ -22,7 +22,7 @@ $context['locations'] = Timber::get_posts($locationArgs);
 
 - Go back to the Wordpress admin panel
 
-- Create a "Areas We Cover"
+- Create a "Areas We Cover" page
 
 - In your theme, duplicate `_views/page.twig` and rename it to `page-areas-we-cover.twig`
 
