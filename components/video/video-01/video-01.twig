@@ -1,0 +1,20 @@
+{# Video - Variant 1 #}
+<div class="overflow-hidden bg-white">
+  <div class="container py-6 md:py-10">
+    <div class="flex flex-wrap md:-mx-8">
+      <div class="w-full md:w-1/2 md:px-8">
+        <video controls class="w-full mb-5 md:mb-0">
+          <source src="{{video}}" type="video/mp4">
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+      </div>
+      <div class="w-full mb-8 md:w-1/2 md:px-8 md:mb-0">
+        <div class="copy text-primary">
+          <span class="block tracking-wider uppercase text-secondary">{{subheading}}</span>
+          <h2>{{heading}}</h2>
+          {{content}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+title: Video
+status: ready
+
+context: 
+    fractal: true
+    subheading: Watch Now
+    heading: Video about service
+    video: https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1280_10MG.mp4
+    content: >-
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue odio urna, eu pulvinar elit fermentum et. Sed convallis fringilla velit. Integer at orci at eros ullamcorper lacinia ac.</p>
+
+      <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Sed nec dolor quis arcu suscipit tincidunt</li>
+        <li>Fusce mi ipsum, placerat ac eros at</li>
+      </ul>
+      
+      <p>Sed nec dolor quis arcu suscipit tincidunt. Nullam consectetur justo quis volutpat fringilla. Phasellus at lobortis metus, ac pulvinar ligula. Fusce mi ipsum, placerat ac eros at, fermentum facilisis nulla. Etiam quis dui ex.</p>
+
+      <p>Aenean ac sem a ligula aliquam fermentum. Maecenas at felis eu tortor sodales ultricies. Praesent a pulvinar purus. Nam tincidunt facilisis lobortis.</p>
