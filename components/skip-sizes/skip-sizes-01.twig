@@ -1,0 +1,22 @@
+{% if options.skip_sizes | length %}
+    {% set skip_sizes = options.skip_sizes %}
+{% endif %}
+
+
+<div class="bg-gray-100 py-8">
+  <div class="container">
+
+    <div class="flex flex-wrap -mx-4 justify-center">
+      {% if fractal %}
+        {% for skip in skip_sizes %}
+          {% render '@skip-size-card' %}
+        {% endfor %}
+      {% else %}
+        {% for skip in skip_sizes %}
+          {% include '_components/skip-size-card.twig' %}
+        {% endfor %}
+      {% endif %}
+    </div>
+
+  </div>
+</div>

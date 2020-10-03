@@ -8,8 +8,10 @@ var concreteForms = document.querySelectorAll(".concrete-form");
 
 concreteForms.forEach((form) => {
   
-  // Do the following when the "Calculate" button is clicked
-	form.querySelector('.concrete-calculate').addEventListener("click", function() {
+  // Do the following when the Concrete Calculator form is submitted
+	form.addEventListener("submit", function(e) {
+
+    e.preventDefault();
 
     // Get the length, depth and width values
     var l = parseFloat(form.querySelector('#length').value);

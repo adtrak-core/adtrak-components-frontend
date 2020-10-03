@@ -1,0 +1,70 @@
+<div class="flex flex-col rounded-lg w-full lg:w-1/3 3xl:w-1/4 max-w-sm p-4 skip-size-card card-{{skip.skip_size|lower|replace({" ":"-"})}}">
+  <div class="flex flex-col flex-1 bg-white shadow-lg rounded-t-lg p-6 pt-8">
+
+    <span class="block font-bold text-3xl xl:text-4xl leading-none text-primary text-center">{{skip.skip_size}}</span>
+
+    {% if skip.skip_subtitle %}
+      <span class="block test-sm text-primary mt-1 text-center">{{skip.skip_subtitle}}</span>
+    {% endif %}
+
+    {% if skip.skip_image %}
+      <div class="w-full px-6">
+        {% if fractal %}
+          <img class="block w-full mt-4" src="{{ skip.skip_image.src }}" alt="{{ skip.skip_size }}" />
+        {% else %}
+          <img class="block w-full mt-4 lazyload" data-src="{{ skip.skip_image.url }}" alt="{{ skip.skip_size }}" />
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if skip.skip_usps %}
+      <ul class="mt-6 flex flex-wrap justify-center">
+      {% for usp in skip.skip_usps %}
+        <li class="py-1 px-2 bg-gray-100 rounded-lg m-1 w-auto text-sm">
+          {% if fractal %}
+            <svg class="icon text-secondary mr-1"><use href="#icon-check"></use></svg>
+          {% else %}
+            {{function ('icon', 'check', 'text-secondary mr-1')}}
+          {% endif %}
+          <span>{{ usp.skip_usp }}</span>
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if skip.skip_capacity or skip.skip_length or skip.skip_width or skip.skip_depth %}
+      <table class="w-full mt-6">
+        <tbody>
+          {% if skip.skip_capacity %}
+            <tr class="border-b border-gray-300">
+              <th class="px-3 py-2 text-right w-2/5 bg-gray-200">Capacity</th>
+              <td class="px-3 py-2 w-3/5 text-center bg-gray-100">{{ skip.skip_capacity }}</td>
+            </tr>
+          {% endif %}
+          {% if skip.skip_length %}
+            <tr class="border-b border-gray-300">
+              <th class="px-3 py-2 text-right w-2/5 bg-gray-200">Length</th>
+              <td class="px-3 py-2 w-3/5 text-center bg-gray-100">{{ skip.skip_length }}</td>
+            </tr>
+          {% endif %}
+          {% if skip.skip_width %}
+            <tr class="border-b border-gray-300">
+              <th class="px-3 py-2 text-right w-2/5 bg-gray-200">Width</th>
+              <td class="px-3 py-2 w-3/5 text-center bg-gray-100">{{ skip.skip_width }}</td>
+            </tr>
+          {% endif %}
+          {% if skip.skip_depth %}
+            <tr class="border-b border-gray-100">
+              <th class="px-3 py-2 text-right w-2/5 bg-gray-200">Depth</th>
+              <td class="px-3 py-2 w-3/5 text-center bg-gray-100">{{ skip.skip_depth }}</td>
+            </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    {% endif %}
+
+  </div>
+
+  <a href="" class="block bg-secondary hover:bg-secondary-dark font-bold text-white text-lg md:text-xl rounded-b-lg p-4 text-center mt-auto">Book this skip</a>
+
+</div>

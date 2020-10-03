@@ -1,0 +1,55 @@
+{# Calculator - Variant 2 #}
+
+{% if options.skip_sizes | length %}
+    {% set skip_sizes = options.skip_sizes %}
+{% endif %}
+
+
+<div class="p-10 bg-primary">
+  <div class="max-w-xl mx-auto">
+    <div class="mb-6 text-center">
+      <span class="block font-bold text-2xl md:text-3xl lg:text-4xl text-secondary">Skip Size Calculator</span>
+      <span class="block text-white">Roughly, how many bin bags do you need to dispose of?</span>
+    </div>
+    
+    <form class="mb-4 md:mb-0 flex flex-wrap skip-calc-form" onsubmit="return false">
+      <label class="block text-sm sr-only" for="amount">Amount</label>
+      <input class="appearance-none mx-auto w-24 md:w-32 text-center p-4 mb-3 text-primary text-4xl md:text-6xl leading-tight focus:outline-none focus:border-gray-400 border-4 border-transparent" id="skip-amount" type="text" placeholder="5">
+
+      <div class="w-full flex flex-wrap">
+        <button class="bg-secondary text-white p-4 rounded leading-tight hover:bg-secondary-dark focus:bg-secondary-dark block w-24 md:w-32 mx-auto skip-calculate" type="button">
+          Calculate
+        </button>
+      </div>
+
+      <div class="w-full text-red-600 text-sm mt-3 text-center hidden skip-calc-error">
+        <p>Please enter a number</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<div class="p-8 bg-gray-100 text-center hidden skip-calc-result">
+
+  <span class="block text-xl text-gray-500 mb-4 hide-if-no-results">We suggest a...</span>
+
+  <div class="flex flex-wrap justify-center">
+    {% if not fractal %}
+      {% for skip in skip_sizes %}
+        {% include '_components/skip-size-card.twig' %}
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <div class="shadow-lg max-w-sm mx-auto skip-size-card card-sorry">
+    <div class="bg-white rounded-t-lg p-6 pt-8">
+      <span class="block font-bold text-3xl xl:text-4xl leading-none text-primary">Sorry!</span>
+      <p class="block test-sm text-primary mt-3 leading-snug">We don't have a skip to accommodate that amount of waste.</p>
+      <p class="block test-sm text-primary mt-3 leading-snug">Give us a call today for free expert advice on 0800 000 000.</p>
+    </div>
+  </div>
+
+  <span class="text-sm text-primary mt-3 block hide-if-no-results">Or call us on 0800 000 000</span>
+
+</div>

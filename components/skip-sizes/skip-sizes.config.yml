@@ -1,0 +1,132 @@
+title: Skip Sizes
+status: ready
+
+context:
+  fractal: true
+  skip_sizes:
+    -
+      skip_size: "2 Yard Skip" 
+      skip_subtitle: "Approx. 20 bin bags"
+      skip_image:
+        src: ""
+      skip_usps:
+        -
+          skip_usp: "Home DIY projects"
+        -
+          skip_usp: " House Clearance"
+        -
+          skip_usp: "Garden projects"
+        -
+          skip_usp: "Lorem ipsum dolor"
+      skip_capacity: "3.00m³"
+      skip_length: "1.80m"
+      skip_width: "0.96m"
+      skip_depth: "1.22m"
+    -
+      skip_size: "4 Yard Skip" 
+      skip_subtitle: "Approx. 40 bin bags"
+      skip_image:
+        src: ""
+      skip_usps:
+        -
+          skip_usp: "Home DIY projects"
+        -
+          skip_usp: " House Clearance"
+        -
+          skip_usp: "Garden projects"
+        -
+          skip_usp: "Lorem ipsum dolor"
+      skip_capacity: "3.00m³"
+      skip_length: "1.80m"
+      skip_width: "0.96m"
+      skip_depth: "1.22m"
+    -
+      skip_size: "6 Yard Skip" 
+      skip_subtitle: "Approx. 60 bin bags"
+      skip_image:
+        src: ""
+      skip_usps:
+        -
+          skip_usp: "Home DIY projects"
+        -
+          skip_usp: " House Clearance"
+        -
+          skip_usp: "Garden projects"
+        -
+          skip_usp: "Lorem ipsum dolor"
+      skip_capacity: "3.00m³"
+      skip_length: "1.80m"
+      skip_width: "0.96m"
+      skip_depth: "1.22m"
+    -
+      skip_size: "8 Yard Skip" 
+      skip_subtitle: "Approx. 80 bin bags"
+      skip_image:
+        src: ""
+      skip_usps:
+        -
+          skip_usp: "Home DIY projects"
+        -
+          skip_usp: " House Clearance"
+        -
+          skip_usp: "Garden projects"
+        -
+          skip_usp: "Lorem ipsum dolor"
+      skip_capacity: "3.00m³"
+      skip_length: "1.80m"
+      skip_width: "0.96m"
+      skip_depth: "1.22m"
+    -
+      skip_size: "12 Yard Skip" 
+      skip_subtitle: "Approx. 120 bin bags"
+      skip_image:
+        src: ""
+      skip_usps:
+        -
+          skip_usp: "Home DIY projects"
+        -
+          skip_usp: " House Clearance"
+        -
+          skip_usp: "Garden projects"
+        -
+          skip_usp: "Lorem ipsum dolor"
+      skip_capacity: "3.00m³"
+      skip_length: "1.80m"
+      skip_width: "0.96m"
+      skip_depth: "1.22m"
+    -
+      skip_size: "14 Yard Skip" 
+      skip_subtitle: "Approx. 140 bin bags"
+      skip_image:
+        src: ""
+      skip_usps:
+        -
+          skip_usp: "Home DIY projects"
+        -
+          skip_usp: " House Clearance"
+        -
+          skip_usp: "Garden projects"
+        -
+          skip_usp: "Lorem ipsum dolor"
+      skip_capacity: "3.00m³"
+      skip_length: "1.80m"
+      skip_width: "0.96m"
+      skip_depth: "1.22m"
+    -
+      skip_size: "RORO Container" 
+      skip_subtitle: "200-400 bin bags"
+      skip_image:
+        src: ""
+      skip_usps:
+        -
+          skip_usp: "Home DIY projects"
+        -
+          skip_usp: " House Clearance"
+        -
+          skip_usp: "Garden projects"
+        -
+          skip_usp: "Lorem ipsum dolor"
+      skip_capacity: "3.00m³"
+      skip_length: "1.80m"
+      skip_width: "0.96m"
+      skip_depth: "1.22m"

@@ -1,0 +1,224 @@
+[
+  {
+      "key": "group_5f779acfb6dc3",
+      "title": "Skip Sizes",
+      "fields": [
+          {
+              "key": "field_5f779ad3ff33d",
+              "label": "Skip Sizes",
+              "name": "skip_sizes",
+              "type": "repeater",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                  "width": "",
+                  "class": "",
+                  "id": ""
+              },
+              "collapsed": "",
+              "min": 0,
+              "max": 0,
+              "layout": "block",
+              "button_label": "",
+              "sub_fields": [
+                  {
+                      "key": "field_5f779af2ff33e",
+                      "label": "Skip Size",
+                      "name": "skip_size",
+                      "type": "text",
+                      "instructions": "e.g. \"4 Yard Skip\"",
+                      "required": 0,
+                      "conditional_logic": 0,
+                      "wrapper": {
+                          "width": "50",
+                          "class": "",
+                          "id": ""
+                      },
+                      "default_value": "",
+                      "placeholder": "",
+                      "prepend": "",
+                      "append": "",
+                      "maxlength": ""
+                  },
+                  {
+                      "key": "field_5f779b99ff340",
+                      "label": "Skip Subtitle",
+                      "name": "skip_subtitle",
+                      "type": "text",
+                      "instructions": "e.g. \"Approx. 40 bin bags\"",
+                      "required": 0,
+                      "conditional_logic": 0,
+                      "wrapper": {
+                          "width": "50",
+                          "class": "",
+                          "id": ""
+                      },
+                      "default_value": "",
+                      "placeholder": "",
+                      "prepend": "",
+                      "append": "",
+                      "maxlength": ""
+                  },
+                  {
+                      "key": "field_5f779b0dff33f",
+                      "label": "Skip Image",
+                      "name": "skip_image",
+                      "type": "image",
+                      "instructions": "",
+                      "required": 0,
+                      "conditional_logic": 0,
+                      "wrapper": {
+                          "width": "50",
+                          "class": "",
+                          "id": ""
+                      },
+                      "return_format": "array",
+                      "preview_size": "medium",
+                      "library": "all",
+                      "min_width": "",
+                      "min_height": "",
+                      "min_size": "",
+                      "max_width": "",
+                      "max_height": "",
+                      "max_size": "",
+                      "mime_types": ""
+                  },
+                  {
+                      "key": "field_5f779bb6ff341",
+                      "label": "Skip USPs",
+                      "name": "skip_usps",
+                      "type": "repeater",
+                      "instructions": "",
+                      "required": 0,
+                      "conditional_logic": 0,
+                      "wrapper": {
+                          "width": "50",
+                          "class": "",
+                          "id": ""
+                      },
+                      "collapsed": "",
+                      "min": 0,
+                      "max": 0,
+                      "layout": "table",
+                      "button_label": "",
+                      "sub_fields": [
+                          {
+                              "key": "field_5f779bd9ff342",
+                              "label": "Skip USP",
+                              "name": "skip_usp",
+                              "type": "text",
+                              "instructions": "",
+                              "required": 0,
+                              "conditional_logic": 0,
+                              "wrapper": {
+                                  "width": "",
+                                  "class": "",
+                                  "id": ""
+                              },
+                              "default_value": "",
+                              "placeholder": "",
+                              "prepend": "",
+                              "append": "",
+                              "maxlength": ""
+                          }
+                      ]
+                  },
+                  {
+                      "key": "field_5f779be4ff343",
+                      "label": "Skip Capacity",
+                      "name": "skip_capacity",
+                      "type": "text",
+                      "instructions": "",
+                      "required": 0,
+                      "conditional_logic": 0,
+                      "wrapper": {
+                          "width": "25",
+                          "class": "",
+                          "id": ""
+                      },
+                      "default_value": "",
+                      "placeholder": "",
+                      "prepend": "",
+                      "append": "",
+                      "maxlength": ""
+                  },
+                  {
+                      "key": "field_5f779c04ff344",
+                      "label": "Skip Width",
+                      "name": "skip_width",
+                      "type": "text",
+                      "instructions": "",
+                      "required": 0,
+                      "conditional_logic": 0,
+                      "wrapper": {
+                          "width": "25",
+                          "class": "",
+                          "id": ""
+                      },
+                      "default_value": "",
+                      "placeholder": "",
+                      "prepend": "",
+                      "append": "",
+                      "maxlength": ""
+                  },
+                  {
+                      "key": "field_5f779c0cff345",
+                      "label": "Skip Length",
+                      "name": "skip_length",
+                      "type": "text",
+                      "instructions": "",
+                      "required": 0,
+                      "conditional_logic": 0,
+                      "wrapper": {
+                          "width": "25",
+                          "class": "",
+                          "id": ""
+                      },
+                      "default_value": "",
+                      "placeholder": "",
+                      "prepend": "",
+                      "append": "",
+                      "maxlength": ""
+                  },
+                  {
+                      "key": "field_5f779c13ff346",
+                      "label": "Skip Depth",
+                      "name": "skip_depth",
+                      "type": "text",
+                      "instructions": "",
+                      "required": 0,
+                      "conditional_logic": 0,
+                      "wrapper": {
+                          "width": "25",
+                          "class": "",
+                          "id": ""
+                      },
+                      "default_value": "",
+                      "placeholder": "",
+                      "prepend": "",
+                      "append": "",
+                      "maxlength": ""
+                  }
+              ]
+          }
+      ],
+      "location": [
+          [
+              {
+                  "param": "options_page",
+                  "operator": "==",
+                  "value": "site-options"
+              }
+          ]
+      ],
+      "menu_order": 0,
+      "position": "normal",
+      "style": "default",
+      "label_placement": "top",
+      "instruction_placement": "label",
+      "hide_on_screen": "",
+      "active": true,
+      "description": ""
+  }
+]

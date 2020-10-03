@@ -10,7 +10,7 @@ Use the following guide to add the *Concrete Calculator* module to your website:
 
 - Paste the code into your new `_resources/js/concrete-calculator.js` file
 
-- Create a new twig file for your Concrete Calculator component: `_views/_components/reviewsio.twig`
+- Create a new twig file for your Concrete Calculator component: `_views/_components/concrete-calculator.twig`
 
 - Copy the code from Fractal's View tab
 
