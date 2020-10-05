@@ -21,6 +21,8 @@ Use the following guide to add the *Skip Sizes* module to your website:
 
 - Copy the code from View tab into your `skip-size-card.twig` file
 
+- Be sure to fill in the `href` value in the "Book Now" link
+
 - Now, in your theme, create `_views/_components/skip-sizes.twig`
 
 - Back in the *Skip Sizes Module* in Fractal, go to the Views tab and copy the code into this file
