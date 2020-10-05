@@ -6,9 +6,11 @@ Use the following guide to add the *Skip Sizes* module to your website:
 
 - Download the `acf.json` file from the assets tab 
 
+- Also in the Assets tab, there are several skip size SVG images for you to use
+
 - Go to the Wordpress Admin panel
 
-- Got to Custom Fields > Tools and import your acf file
+- Go to Custom Fields > Tools and import your acf file
 - - This will create a Skip Sizes field group in your 'Site Options' page
 
 - Add in your skip sizes data in your site options
