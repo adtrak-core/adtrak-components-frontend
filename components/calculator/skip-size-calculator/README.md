@@ -16,6 +16,8 @@ Use the following guide to add the *Skip Size Calculator* module to your website
 
 - Paste the code into your new `_resources/js/skip-size-calculator.js` file
 
+- IMPORTANT: you will need to manually edit the `if` statements in the JavaScript code (from line 43) based on the skip sizes that your client has available
+
 - Create a new twig file for your Skip Size Calculator component: `_views/_components/skip-size-calculator.twig`
 
 - Copy the code from Fractal's View tab
