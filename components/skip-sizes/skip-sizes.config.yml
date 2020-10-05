@@ -8,7 +8,7 @@ context:
       skip_size: "2 Yard Skip" 
       skip_subtitle: "Approx. 20 bin bags"
       skip_image:
-        src: ""
+        src: "2-yd-skip.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"
@@ -26,7 +26,7 @@ context:
       skip_size: "4 Yard Skip" 
       skip_subtitle: "Approx. 40 bin bags"
       skip_image:
-        src: ""
+        src: "4-yd-skip.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"
@@ -44,7 +44,7 @@ context:
       skip_size: "6 Yard Skip" 
       skip_subtitle: "Approx. 60 bin bags"
       skip_image:
-        src: ""
+        src: "6-yd-skip.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"
@@ -62,7 +62,7 @@ context:
       skip_size: "8 Yard Skip" 
       skip_subtitle: "Approx. 80 bin bags"
       skip_image:
-        src: ""
+        src: "8-yd-skip.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"
@@ -80,7 +80,7 @@ context:
       skip_size: "12 Yard Skip" 
       skip_subtitle: "Approx. 120 bin bags"
       skip_image:
-        src: ""
+        src: "12-yd-skip.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"
@@ -98,7 +98,7 @@ context:
       skip_size: "14 Yard Skip" 
       skip_subtitle: "Approx. 140 bin bags"
       skip_image:
-        src: ""
+        src: "14-yd-skip.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"
@@ -116,7 +116,7 @@ context:
       skip_size: "RORO Container" 
       skip_subtitle: "200-400 bin bags"
       skip_image:
-        src: ""
+        src: "roro-skip.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"
