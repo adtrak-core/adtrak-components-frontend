@@ -8,14 +8,14 @@ Use the following guide to add the *Hero* module to your website:
 
 - Go to the Wordpress Admin panel
 
-- Got to Custom Fields > Tools and import your acf file
+- Go to Custom Fields > Tools and import your acf file
 - - This will create a group of Hero fields on the "pages" of your website
 
 - Add content to the ACF fields on each page
 
 - Go to Fractal and copy the code you would like from the View tab
 
-- Paste the code into `_views/components/hero.twig`
+- Paste the code into `_views/_components/hero.twig`
 
 - Open `_views/_layout/base.twig`
 

@@ -8,7 +8,7 @@ Use the following guide to add the *FAQs* module to your website:
 
 - Go to the Wordpress Admin panel
 
-- Got to Custom Fields > Tools and import your acf file
+- Go to Custom Fields > Tools and import your acf file
 - - This will create the FAQs field group in your 'Site Options' page
 
 - Add content to the FAQs in your site options

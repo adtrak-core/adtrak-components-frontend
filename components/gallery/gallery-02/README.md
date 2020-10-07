@@ -8,7 +8,7 @@ Use the following guide to add the *Gallery* module to your website:
 
 - Go to the Wordpress Admin panel
 
-- Got to Custom Fields > Tools and import your acf file
+- Go to Custom Fields > Tools and import your acf file
 - - This will create a Gallery Carousel field on each "page" of your website with a fallback in the "Site Options" page
 
 - Go to Site Options and add images to the Gallery Carousel
