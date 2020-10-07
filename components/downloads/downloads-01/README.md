@@ -15,11 +15,11 @@ Use the following guide to add the *Downloads* module to your website:
 
 - Add some download links in
 
-- In your theme, create a `_views/components/downloads.twig` file
+- In your theme, create a `_views/_components/downloads.twig` file
 
 - Go to Fractal and copy the code you would like from the View tab
 
-- Paste the code into `_views/components/downloads.twig`
+- Paste the code into `_views/_components/downloads.twig`
 
 - Open the `_views/page.twig` file in your theme
 

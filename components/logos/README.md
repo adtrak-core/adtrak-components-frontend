@@ -10,11 +10,11 @@ Use the following guide to add the *Downloads* module to your website:
 
 - Go to the site options page in your Wordpress Admin panel and add some "logos" items
 
-- In your theme, create a `_views/components/logos.twig` file
+- In your theme, create a `_views/_components/logos.twig` file
 
 - Go to Fractal and copy the code you would like from the View tab
 
-- Paste the code into `_views/components/logos.twig`
+- Paste the code into `_views/_components/logos.twig`
 
 -. Add the following CSS to the bottom of your `_resources/styles/main.scss` file
 

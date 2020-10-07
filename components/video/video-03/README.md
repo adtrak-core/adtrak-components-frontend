@@ -15,11 +15,11 @@ Use the following guide to add the *Video* module to your website:
 
 - Enter the content in the ACF fields
 
-- In your theme, create a `_views/components/video.twig` file
+- In your theme, create a `_views/_components/video.twig` file
 
 - Go to Fractal and copy the code you would like from the View tab
 
-- Paste the code into `_views/components/video.twig`
+- Paste the code into `_views/_components/video.twig`
 
 - Open the twig template where you would like to include your video
 
