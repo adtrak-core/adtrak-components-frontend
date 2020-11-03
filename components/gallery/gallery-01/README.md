@@ -19,6 +19,17 @@ Use the following guide to add the *Gallery* module to your website:
 
 - Paste this code into the `simple-carousel.js` file in your theme
 
+- Add the following CSS to the bottom of your `_resources/styles/main.scss` file
+```
+.carousel-container {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.carousel-container::-webkit-scrollbar { /* WebKit */
+  display: none;
+}
+```
+
 - Create a new twig file for your Gallery Carousel component: `_components/gallery-carousel.twig`
 
 - In Fractal, copy the code from the View tab into this new file
