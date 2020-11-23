@@ -1,21 +1,21 @@
 {# Hero - Variant 4 #} 
-<div class="bg-white relative overflow-hidden">
+<div class="relative overflow-hidden bg-white">
   <div class="container">
     <div class="flex flex-wrap md:-mx-8">
-      <div class="w-full md:w-1/2 md:px-8 order-2 md:order-1 py-6 md:py-32 xl:py-40">
+      <div class="order-2 w-full py-6 md:w-1/2 md:px-8 md:order-1 md:py-32 xl:py-40">
         {# If the subheading data is passed in #}
         {% if subHeading %}
-            <span class="text-secondary uppercase tracking-wider block mb-2 mt-4">{{ subHeading }}</span>
+            <span class="block mt-4 mb-2 tracking-wider uppercase text-secondary">{{ subHeading }}</span>
         {% endif %}
         
         {# If the heading data is passed in #}
         {% if heading %}
-            <h1 class="font-bold text-3xl md:text-4xl xl:text-5xl leading-tight text-primary mb-6">{{ heading }}</h1>
+            <h1 class="mb-6 text-3xl font-bold leading-tight md:text-4xl xl:text-5xl text-primary">{{ heading }}</h1>
         {% endif %}
         
         {# If the usps data is passed in #}
         {% if usps %}
-            <ul class="list-inside list-disc mb-6">
+            <ul class="mb-6 list-disc list-inside">
             {% for usp in usps %}
                 <li class="mb-1 text-primary">{{ usp.text }}</li>
             {% endfor %}
@@ -25,7 +25,7 @@
         {% if btns %}
           <div class="flex flex-wrap items-center">
             {% for btn in btns %}
-              <a href="{{ btn.link }}" class="bg-secondary hover:bg-secondary-dark focus:bg-secondary-dark text-center border-2 border-transparent rounded-md text-white block px-4 py-2 md:mr-4 mb-3 w-full md:w-auto">{{ btn.text }}</a>
+              <a href="{{ btn.link }}" class="block w-full px-4 py-2 mb-3 text-center text-white border-2 border-transparent rounded-md bg-secondary hover:bg-secondary-dark focus:bg-secondary-dark md:mr-4 md:w-auto">{{ btn.text }}</a>
             {% endfor %}
           </div>
         {% endif %}
@@ -33,12 +33,12 @@
 
       {% if image %}
         {% if fractal %}
-          <div class="order-1 md:order-2 md:absolute top-0 right-0 bottom-0 w-full md:w-1/2">
-            <img src="{{ image.url }}" alt="{{ image.title }}" class="w-full h-full object-center object-cover" />
+          <div class="top-0 bottom-0 right-0 order-1 w-full md:order-2 md:absolute md:w-1/2">
+            <img src="{{ image.src }}" alt="{{ image.title }}" class="object-cover object-center w-full h-full" />
           </div>
         {% else %}
-          <div class="order-1 md:order-2 md:absolute top-0 right-0 bottom-0 w-full md:w-1/2">
-            <img src="{{ image.url |resize(1200,900, 'center') }}" alt="{{ image.title }}" class="w-full h-full object-center object-cover" />
+          <div class="top-0 bottom-0 right-0 order-1 w-full md:order-2 md:absolute md:w-1/2">
+            <img src="{{ image.src |resize(1200,900, 'center') }}" alt="{{ image.title }}" class="object-cover object-center w-full h-full" />
           </div>
         {% endif %}
       {% endif %}

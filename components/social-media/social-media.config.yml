@@ -3,10 +3,10 @@ status: ready
 
 context:
   options:
-    social_facebook: https://facebook.com
-    social_twitter: https://facebook.com
-    social_instagram: https://facebook.com
+    social_facebook: https://facebook.com/adtrak
+    social_twitter: https://twitter.com/adtrak
+    social_instagram: https://instagram.com/adtrak
     social_other:
       -
-        name: Twitter
-        url: https://twitter.com
+        name: LinkedIn
+        url: https://www.linkedin.com/company/adtrak

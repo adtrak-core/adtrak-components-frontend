@@ -8,7 +8,7 @@ context:
       skip_size: "2 Yard Skip" 
       skip_subtitle: "Approx. 20 bin bags"
       skip_image:
-        src: ""
+        src: "https://pwd-skips.adtrak.agency/wp-content/uploads/2019/10/min-skip.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"
@@ -26,7 +26,7 @@ context:
       skip_size: "4 Yard Skip" 
       skip_subtitle: "Approx. 40 bin bags"
       skip_image:
-        src: ""
+        src: "https://pwd-skips.adtrak.agency/wp-content/uploads/2019/10/midi-skip.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"
@@ -44,7 +44,7 @@ context:
       skip_size: "6 Yard Skip" 
       skip_subtitle: "Approx. 60 bin bags"
       skip_image:
-        src: ""
+        src: "https://pwd-skips.adtrak.agency/wp-content/uploads/2019/10/large-midi-skip.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"
@@ -62,7 +62,7 @@ context:
       skip_size: "8 Yard Skip" 
       skip_subtitle: "Approx. 80 bin bags"
       skip_image:
-        src: ""
+        src: "https://pwd-skips.adtrak.agency/wp-content/uploads/2019/10/medium-builders-skip.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"
@@ -80,7 +80,7 @@ context:
       skip_size: "12 Yard Skip" 
       skip_subtitle: "Approx. 120 bin bags"
       skip_image:
-        src: ""
+        src: "https://pwd-skips.adtrak.agency/wp-content/uploads/2019/10/large-builders-skip.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"
@@ -98,7 +98,7 @@ context:
       skip_size: "14 Yard Skip" 
       skip_subtitle: "Approx. 140 bin bags"
       skip_image:
-        src: ""
+        src: "https://pwd-skips.adtrak.agency/wp-content/uploads/2019/10/large-maxi-skip.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"
@@ -116,7 +116,7 @@ context:
       skip_size: "RORO Container" 
       skip_subtitle: "200-400 bin bags"
       skip_image:
-        src: ""
+        src: "https://pwd-skips.adtrak.agency/wp-content/uploads/2019/10/roll-on-roll-off.svg"
       skip_usps:
         -
           skip_usp: "Home DIY projects"

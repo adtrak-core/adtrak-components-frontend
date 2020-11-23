@@ -9,7 +9,7 @@
     <div class="flex flex-wrap -mx-4 justify-center">
       {% if fractal %}
         {% for skip in skip_sizes %}
-          {% render '@skip-size-card' %}
+          {% include 'skip-sizes/skip-size-card/skip-size-card.twig' with { skip } %}
         {% endfor %}
       {% else %}
         {% for skip in skip_sizes %}

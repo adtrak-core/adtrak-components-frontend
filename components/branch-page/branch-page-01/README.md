@@ -12,7 +12,7 @@ Use the following guide to add the *Branch Page* module to your website:
 
 - Go to the Wordpress Admin panel
 
-- Got to Custom Fields > Tools and import your acf file
+- Go to Custom Fields > Tools and import your acf file
 
 - Go to Branches and add your branches
 

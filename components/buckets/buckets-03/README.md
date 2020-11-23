@@ -15,11 +15,11 @@ Use the following guide to add the *Buckets* module to your website:
 
 - Select the buckets you require from the ACF field we just created
 
-- In your theme, create a `_views/components/buckets.twig` file
+- In your theme, create a `_views/_components/buckets.twig` file
 
 - Go to Fractal and copy the code you would like from the View tab
 
-- Paste the code into `_views/components/buckets.twig`
+- Paste the code into `_views/_components/buckets.twig`
 
 - Open the `_views/front-page.twig` file in your theme
 

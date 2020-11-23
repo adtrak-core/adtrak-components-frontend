@@ -8,7 +8,7 @@ Use the following guide to add the *Buckets* module to your website:
 
 - Go to the Wordpress Admin panel
 
-- Got to Custom Fields > Tools and import your acf file
+- Go to Custom Fields > Tools and import your acf file
 - - This will create a group of "Content" fields on both your "pages" and "Site Options page" which work as fallbacks
 
 - In Fractal, copy your preferred variant from the Views tab

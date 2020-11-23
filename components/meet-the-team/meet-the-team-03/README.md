@@ -33,7 +33,7 @@ $context['teamMembers'] = new Timber\PostQuery($teamMembers);
 
 - Go to Fractal and copy the code you would like from the View tab
 
-- Paste the code into `_views/components/meet-the-team.twig`
+- Paste the code into `_views/_components/meet-the-team.twig`
 
 - Open the twig file you would like to include Team Members on
 
