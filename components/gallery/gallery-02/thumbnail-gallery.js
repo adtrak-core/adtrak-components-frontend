@@ -101,5 +101,3 @@ thumbGals.forEach((gal) => {
   });
 
 });
-
-
